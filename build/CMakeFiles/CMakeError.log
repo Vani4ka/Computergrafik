@@ -1,0 +1,73 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4159610276/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4159610276.dir/build.make CMakeFiles/cmTryCompileExec4159610276.dir/build
+make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4159610276.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec4159610276.dir/CheckSymbolExists.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec4159610276
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4159610276.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec4159610276.dir/CheckSymbolExists.c.o  -o cmTryCompileExec4159610276 -rdynamic 
+CMakeFiles/cmTryCompileExec4159610276.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec4159610276] Error 1
+make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec4159610276/fast] Error 2
+
+File /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec987003702/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec987003702.dir/build.make CMakeFiles/cmTryCompileExec987003702.dir/build
+make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec987003702.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec987003702.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec987003702
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec987003702.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec987003702.dir/CheckFunctionExists.c.o  -o cmTryCompileExec987003702 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec987003702] Error 1
+make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec987003702/fast] Error 2
+
+
+Determining if the function glXGetProcAddressEXT exists failed with the following output:
+Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec36350244/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec36350244.dir/build.make CMakeFiles/cmTryCompileExec36350244.dir/build
+make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec36350244.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT   -o CMakeFiles/cmTryCompileExec36350244.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec36350244
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec36350244.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressEXT    CMakeFiles/cmTryCompileExec36350244.dir/CheckFunctionExists.c.o  -o cmTryCompileExec36350244 -rdynamic -lGL 
+CMakeFiles/cmTryCompileExec36350244.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x15): undefined reference to `glXGetProcAddressEXT'
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec36350244] Error 1
+make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec36350244/fast] Error 2
+
+
