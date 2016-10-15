@@ -25,6 +25,10 @@ class ApplicationSolar : public Application {
   // draw all objects
   void render() const;
 
+  //Assign. 1 
+  //calculates and uploads the model- and normal matrix
+  void upload_planet_transforms(Planet p);
+
  protected:
   void initializeShaderPrograms();
   void initializeGeometry();

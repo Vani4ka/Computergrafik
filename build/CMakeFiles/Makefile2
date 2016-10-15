@@ -56,8 +56,8 @@ CMAKE_BINARY_DIR = /home/vanya/WS16-17/Computergrafik/Computergrafik/build
 # Target rules for target CMakeFiles/framework.dir
 
 # All Build rule for target.
-CMakeFiles/framework.dir/all: external/glfw-3.1.1/src/CMakeFiles/glfw.dir/all
 CMakeFiles/framework.dir/all: external/glbinding-2.1.1/source/glbinding/CMakeFiles/glbinding.dir/all
+CMakeFiles/framework.dir/all: external/glfw-3.1.1/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f CMakeFiles/framework.dir/build.make CMakeFiles/framework.dir/depend
 	$(MAKE) -f CMakeFiles/framework.dir/build.make CMakeFiles/framework.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles  1 2 3 4 5 6 7
@@ -92,9 +92,9 @@ clean: CMakeFiles/framework.dir/clean
 # Target rules for target CMakeFiles/solar_system.dir
 
 # All Build rule for target.
-CMakeFiles/solar_system.dir/all: external/glfw-3.1.1/src/CMakeFiles/glfw.dir/all
-CMakeFiles/solar_system.dir/all: external/glbinding-2.1.1/source/glbinding/CMakeFiles/glbinding.dir/all
 CMakeFiles/solar_system.dir/all: CMakeFiles/framework.dir/all
+CMakeFiles/solar_system.dir/all: external/glbinding-2.1.1/source/glbinding/CMakeFiles/glbinding.dir/all
+CMakeFiles/solar_system.dir/all: external/glfw-3.1.1/src/CMakeFiles/glfw.dir/all
 	$(MAKE) -f CMakeFiles/solar_system.dir/build.make CMakeFiles/solar_system.dir/depend
 	$(MAKE) -f CMakeFiles/solar_system.dir/build.make CMakeFiles/solar_system.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles  100

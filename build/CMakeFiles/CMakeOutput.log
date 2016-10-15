@@ -28,30 +28,30 @@ The CXX compiler identification is GNU, found in "/home/vanya/WS16-17/Computergr
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3375452393/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3375452393.dir/build.make CMakeFiles/cmTryCompileExec3375452393.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1927051239/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1927051239.dir/build.make CMakeFiles/cmTryCompileExec1927051239.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3375452393.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3375452393.dir/testCCompiler.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTryCompileExec3375452393
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3375452393.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3375452393.dir/testCCompiler.c.o  -o cmTryCompileExec3375452393 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec1927051239.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1927051239.dir/testCCompiler.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTryCompileExec1927051239
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1927051239.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1927051239.dir/testCCompiler.c.o  -o cmTryCompileExec1927051239 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec2919158485/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2919158485.dir/build.make CMakeFiles/cmTryCompileExec2919158485.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2168851112/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2168851112.dir/build.make CMakeFiles/cmTryCompileExec2168851112.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.2/Modules/CMakeCCompilerABI.c
-Linking C executable cmTryCompileExec2919158485
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2919158485.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2919158485 -rdynamic  
+Building C object CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.2/Modules/CMakeCCompilerABI.c
+Linking C executable cmTryCompileExec2168851112
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2168851112.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2168851112 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -61,8 +61,8 @@ Thread model: posix
 gcc version 4.8.5 (Ubuntu 4.8.5-2ubuntu1~14.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2919158485' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2919158485 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2168851112' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2168851112 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -70,15 +70,15 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec2919158485/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2919158485.dir/build.make CMakeFiles/cmTryCompileExec2919158485.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec2168851112/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec2168851112.dir/build.make CMakeFiles/cmTryCompileExec2168851112.dir/build]
   ignore line: [make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building C object CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.2/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTryCompileExec2919158485]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2919158485.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2919158485 -rdynamic  ]
+  ignore line: [Building C object CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.2/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTryCompileExec2168851112]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2168851112.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o  -o cmTryCompileExec2168851112 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -88,8 +88,8 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 4.8.5 (Ubuntu 4.8.5-2ubuntu1~14.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2919158485' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2919158485 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec2168851112' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec2168851112 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -103,7 +103,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec2919158485] ==> ignore
+    arg [cmTryCompileExec2168851112] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec2919158485.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec2168851112.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -149,15 +149,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3570004349/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3570004349.dir/build.make CMakeFiles/cmTryCompileExec3570004349.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3543388553/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3543388553.dir/build.make CMakeFiles/cmTryCompileExec3543388553.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3570004349.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTryCompileExec3570004349.dir/feature_tests.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.c
-Linking C executable cmTryCompileExec3570004349
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3570004349.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec3570004349.dir/feature_tests.c.o  -o cmTryCompileExec3570004349 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3543388553.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTryCompileExec3543388553.dir/feature_tests.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec3543388553
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3543388553.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3543388553.dir/feature_tests.c.o  -o cmTryCompileExec3543388553 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -170,15 +170,15 @@ make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/bu
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec2666211098/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2666211098.dir/build.make CMakeFiles/cmTryCompileExec2666211098.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec22289545/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec22289545.dir/build.make CMakeFiles/cmTryCompileExec22289545.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2666211098.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTryCompileExec2666211098.dir/feature_tests.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.c
-Linking C executable cmTryCompileExec2666211098
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2666211098.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec2666211098.dir/feature_tests.c.o  -o cmTryCompileExec2666211098 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec22289545.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTryCompileExec22289545.dir/feature_tests.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec22289545
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec22289545.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec22289545.dir/feature_tests.c.o  -o cmTryCompileExec22289545 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -191,15 +191,15 @@ make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/bu
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec4221485067/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4221485067.dir/build.make CMakeFiles/cmTryCompileExec4221485067.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec731251811/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec731251811.dir/build.make CMakeFiles/cmTryCompileExec731251811.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4221485067.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTryCompileExec4221485067.dir/feature_tests.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.c
-Linking C executable cmTryCompileExec4221485067
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4221485067.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec4221485067.dir/feature_tests.c.o  -o cmTryCompileExec4221485067 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec731251811.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTryCompileExec731251811.dir/feature_tests.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.c
+Linking C executable cmTryCompileExec731251811
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec731251811.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec731251811.dir/feature_tests.c.o  -o cmTryCompileExec731251811 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -210,30 +210,30 @@ make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/bu
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1784555096/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1784555096.dir/build.make CMakeFiles/cmTryCompileExec1784555096.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1080068244/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1080068244.dir/build.make CMakeFiles/cmTryCompileExec1080068244.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1784555096.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1784555096.dir/testCXXCompiler.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTryCompileExec1784555096
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1784555096.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec1784555096.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1784555096 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec1080068244.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1080068244.dir/testCXXCompiler.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTryCompileExec1080068244
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1080068244.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec1080068244.dir/testCXXCompiler.cxx.o  -o cmTryCompileExec1080068244 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1935284713/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1935284713.dir/build.make CMakeFiles/cmTryCompileExec1935284713.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3666354357/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3666354357.dir/build.make CMakeFiles/cmTryCompileExec3666354357.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTryCompileExec1935284713
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1935284713.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1935284713 -rdynamic  
+Building CXX object CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTryCompileExec3666354357
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3666354357.dir/link.txt --verbose=1
+/usr/bin/c++       -v CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3666354357 -rdynamic  
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
@@ -243,8 +243,8 @@ Thread model: posix
 gcc version 4.8.5 (Ubuntu 4.8.5-2ubuntu1~14.04.1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1935284713' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1935284713 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3666354357' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3666354357 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -252,15 +252,15 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec1935284713/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec1935284713.dir/build.make CMakeFiles/cmTryCompileExec1935284713.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTryCompileExec3666354357/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTryCompileExec3666354357.dir/build.make CMakeFiles/cmTryCompileExec3666354357.dir/build]
   ignore line: [make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp']
   ignore line: [/usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1]
-  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTryCompileExec1935284713]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1935284713.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec1935284713 -rdynamic  ]
+  ignore line: [Building CXX object CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.2/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTryCompileExec3666354357]
+  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3666354357.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o  -o cmTryCompileExec3666354357 -rdynamic  ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper]
@@ -270,8 +270,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 4.8.5 (Ubuntu 4.8.5-2ubuntu1~14.04.1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/4.8/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec1935284713' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec1935284713 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTryCompileExec3666354357' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/4.8/collect2 --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTryCompileExec3666354357 /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/4.8 -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../.. CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/4.8/crtend.o /usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/collect2] ==> ignore
     arg [--sysroot=/] ==> ignore
     arg [--build-id] ==> ignore
@@ -285,7 +285,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTryCompileExec1935284713] ==> ignore
+    arg [cmTryCompileExec3666354357] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/4.8/crtbegin.o] ==> ignore
@@ -297,7 +297,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/4.8/../../..]
-    arg [CMakeFiles/cmTryCompileExec1935284713.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTryCompileExec3666354357.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -329,15 +329,15 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1y] compiler features compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec980970450/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec980970450.dir/build.make CMakeFiles/cmTryCompileExec980970450.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3792067332/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3792067332.dir/build.make CMakeFiles/cmTryCompileExec3792067332.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec980970450.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTryCompileExec980970450.dir/feature_tests.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTryCompileExec980970450
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec980970450.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec980970450.dir/feature_tests.cxx.o  -o cmTryCompileExec980970450 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec3792067332.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1y -o CMakeFiles/cmTryCompileExec3792067332.dir/feature_tests.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec3792067332
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3792067332.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3792067332.dir/feature_tests.cxx.o  -o cmTryCompileExec3792067332 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -403,15 +403,15 @@ make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/bu
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec4051752398/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4051752398.dir/build.make CMakeFiles/cmTryCompileExec4051752398.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3913472904/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3913472904.dir/build.make CMakeFiles/cmTryCompileExec3913472904.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec4051752398.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTryCompileExec4051752398.dir/feature_tests.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTryCompileExec4051752398
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4051752398.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec4051752398.dir/feature_tests.cxx.o  -o cmTryCompileExec4051752398 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec3913472904.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTryCompileExec3913472904.dir/feature_tests.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec3913472904
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3913472904.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec3913472904.dir/feature_tests.cxx.o  -o cmTryCompileExec3913472904 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -477,15 +477,15 @@ make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/bu
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3758389835/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3758389835.dir/build.make CMakeFiles/cmTryCompileExec3758389835.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec824301191/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec824301191.dir/build.make CMakeFiles/cmTryCompileExec824301191.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec3758389835.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTryCompileExec3758389835.dir/feature_tests.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTryCompileExec3758389835
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3758389835.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTryCompileExec3758389835.dir/feature_tests.cxx.o  -o cmTryCompileExec3758389835 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec824301191.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTryCompileExec824301191.dir/feature_tests.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTryCompileExec824301191
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec824301191.dir/link.txt --verbose=1
+/usr/bin/c++        CMakeFiles/cmTryCompileExec824301191.dir/feature_tests.cxx.o  -o cmTryCompileExec824301191 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
@@ -549,165 +549,165 @@ make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/bu
 Determining if files pthread.h exist passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec2791034158/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2791034158.dir/build.make CMakeFiles/cmTryCompileExec2791034158.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec867562559/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec867562559.dir/build.make CMakeFiles/cmTryCompileExec867562559.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2791034158.dir/CheckIncludeFiles.c.o
-/usr/bin/cc    -o CMakeFiles/cmTryCompileExec2791034158.dir/CheckIncludeFiles.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
-Linking C executable cmTryCompileExec2791034158
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2791034158.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTryCompileExec2791034158.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec2791034158 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec867562559.dir/CheckIncludeFiles.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec867562559.dir/CheckIncludeFiles.c.o   -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTryCompileExec867562559
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec867562559.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec867562559.dir/CheckIncludeFiles.c.o  -o cmTryCompileExec867562559 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function pthread_create exists in the pthread passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec4027000863/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4027000863.dir/build.make CMakeFiles/cmTryCompileExec4027000863.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1405152472/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1405152472.dir/build.make CMakeFiles/cmTryCompileExec1405152472.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4027000863.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec4027000863.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec4027000863
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4027000863.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec4027000863.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4027000863 -rdynamic -lpthread 
+Building C object CMakeFiles/cmTryCompileExec1405152472.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1405152472.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1405152472
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1405152472.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1405152472.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1405152472 -rdynamic -lpthread 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function XOpenDisplay exists in the /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1830307570/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1830307570.dir/build.make CMakeFiles/cmTryCompileExec1830307570.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1345803918/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1345803918.dir/build.make CMakeFiles/cmTryCompileExec1345803918.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1830307570.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec1830307570.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1830307570
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1830307570.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec1830307570.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1830307570 -rdynamic -lX11 -lXext 
+Building C object CMakeFiles/cmTryCompileExec1345803918.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay   -o CMakeFiles/cmTryCompileExec1345803918.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1345803918
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1345803918.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=XOpenDisplay    CMakeFiles/cmTryCompileExec1345803918.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1345803918 -rdynamic -lX11 -lXext 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function gethostbyname exists passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1506455768/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1506455768.dir/build.make CMakeFiles/cmTryCompileExec1506455768.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3866316995/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3866316995.dir/build.make CMakeFiles/cmTryCompileExec3866316995.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1506455768.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec1506455768.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1506455768
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1506455768.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec1506455768.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1506455768 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3866316995.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTryCompileExec3866316995.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3866316995
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3866316995.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=gethostbyname    CMakeFiles/cmTryCompileExec3866316995.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3866316995 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function connect exists passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3295111432/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3295111432.dir/build.make CMakeFiles/cmTryCompileExec3295111432.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3422969020/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3422969020.dir/build.make CMakeFiles/cmTryCompileExec3422969020.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3295111432.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3295111432.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3295111432
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3295111432.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3295111432.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3295111432 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec3422969020.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec3422969020.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3422969020
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3422969020.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec3422969020.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3422969020 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function remove exists passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3838011864/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3838011864.dir/build.make CMakeFiles/cmTryCompileExec3838011864.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2806989913/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2806989913.dir/build.make CMakeFiles/cmTryCompileExec2806989913.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3838011864.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec3838011864.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3838011864
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3838011864.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec3838011864.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3838011864 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2806989913.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove   -o CMakeFiles/cmTryCompileExec2806989913.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2806989913
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2806989913.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=remove    CMakeFiles/cmTryCompileExec2806989913.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2806989913 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function shmat exists passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec3793722144/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3793722144.dir/build.make CMakeFiles/cmTryCompileExec3793722144.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2173097758/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2173097758.dir/build.make CMakeFiles/cmTryCompileExec2173097758.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3793722144.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec3793722144.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec3793722144
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3793722144.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec3793722144.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3793722144 -rdynamic 
+Building C object CMakeFiles/cmTryCompileExec2173097758.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat   -o CMakeFiles/cmTryCompileExec2173097758.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec2173097758
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2173097758.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=shmat    CMakeFiles/cmTryCompileExec2173097758.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2173097758 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function IceConnectionNumber exists in the ICE passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec1479335547/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1479335547.dir/build.make CMakeFiles/cmTryCompileExec1479335547.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec416393179/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec416393179.dir/build.make CMakeFiles/cmTryCompileExec416393179.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1479335547.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec1479335547.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec1479335547
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1479335547.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec1479335547.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1479335547 -rdynamic -lICE 
+Building C object CMakeFiles/cmTryCompileExec416393179.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber   -o CMakeFiles/cmTryCompileExec416393179.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec416393179
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec416393179.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=IceConnectionNumber    CMakeFiles/cmTryCompileExec416393179.dir/CheckFunctionExists.c.o  -o cmTryCompileExec416393179 -rdynamic -lICE 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function glXGetProcAddress exists passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec2897058401/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2897058401.dir/build.make CMakeFiles/cmTryCompileExec2897058401.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3998655477/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3998655477.dir/build.make CMakeFiles/cmTryCompileExec3998655477.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2897058401.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddress   -o CMakeFiles/cmTryCompileExec2897058401.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec2897058401
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2897058401.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddress    CMakeFiles/cmTryCompileExec2897058401.dir/CheckFunctionExists.c.o  -o cmTryCompileExec2897058401 -rdynamic -lGL 
+Building C object CMakeFiles/cmTryCompileExec3998655477.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddress   -o CMakeFiles/cmTryCompileExec3998655477.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec3998655477
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3998655477.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddress    CMakeFiles/cmTryCompileExec3998655477.dir/CheckFunctionExists.c.o  -o cmTryCompileExec3998655477 -rdynamic -lGL 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Determining if the function glXGetProcAddressARB exists passed with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec4155125137/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4155125137.dir/build.make CMakeFiles/cmTryCompileExec4155125137.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec132249716/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec132249716.dir/build.make CMakeFiles/cmTryCompileExec132249716.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4155125137.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB   -o CMakeFiles/cmTryCompileExec4155125137.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
-Linking C executable cmTryCompileExec4155125137
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4155125137.dir/link.txt --verbose=1
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB    CMakeFiles/cmTryCompileExec4155125137.dir/CheckFunctionExists.c.o  -o cmTryCompileExec4155125137 -rdynamic -lGL 
+Building C object CMakeFiles/cmTryCompileExec132249716.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB   -o CMakeFiles/cmTryCompileExec132249716.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec132249716
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec132249716.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=glXGetProcAddressARB    CMakeFiles/cmTryCompileExec132249716.dir/CheckFunctionExists.c.o  -o cmTryCompileExec132249716 -rdynamic -lGL 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 
 Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_VISIBILITY succeded with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec602031361/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec602031361.dir/build.make CMakeFiles/cmTryCompileExec602031361.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1420875866/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1420875866.dir/build.make CMakeFiles/cmTryCompileExec1420875866.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec602031361.dir/src.cxx.o
-/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_VISIBILITY   -fvisibility=hidden -o CMakeFiles/cmTryCompileExec602031361.dir/src.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTryCompileExec602031361
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec602031361.dir/link.txt --verbose=1
-/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_VISIBILITY    CMakeFiles/cmTryCompileExec602031361.dir/src.cxx.o  -o cmTryCompileExec602031361 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec1420875866.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_VISIBILITY   -fvisibility=hidden -o CMakeFiles/cmTryCompileExec1420875866.dir/src.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec1420875866
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1420875866.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_VISIBILITY    CMakeFiles/cmTryCompileExec1420875866.dir/src.cxx.o  -o cmTryCompileExec1420875866 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -715,15 +715,15 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test COMPILER_HAS_HIDDEN_INLINE_VISIBILITY succeded with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec4201510080/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4201510080.dir/build.make CMakeFiles/cmTryCompileExec4201510080.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec88927437/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec88927437.dir/build.make CMakeFiles/cmTryCompileExec88927437.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec4201510080.dir/src.cxx.o
-/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY   -fvisibility-inlines-hidden -o CMakeFiles/cmTryCompileExec4201510080.dir/src.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTryCompileExec4201510080
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec4201510080.dir/link.txt --verbose=1
-/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY    CMakeFiles/cmTryCompileExec4201510080.dir/src.cxx.o  -o cmTryCompileExec4201510080 -rdynamic 
+Building CXX object CMakeFiles/cmTryCompileExec88927437.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY   -fvisibility-inlines-hidden -o CMakeFiles/cmTryCompileExec88927437.dir/src.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTryCompileExec88927437
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec88927437.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_HAS_HIDDEN_INLINE_VISIBILITY    CMakeFiles/cmTryCompileExec88927437.dir/src.cxx.o  -o cmTryCompileExec88927437 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 Source file was:
@@ -731,12 +731,12 @@ int main() { return 0; }
 Performing C++ SOURCE FILE Test COMPILER_HAS_DEPRECATED_ATTR succeded with the following output:
 Change Dir: /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTryCompileExec537235164/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec537235164.dir/build.make CMakeFiles/cmTryCompileExec537235164.dir/build
+Run Build Command:"/usr/bin/make" "cmTryCompileExec208401956/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec208401956.dir/build.make CMakeFiles/cmTryCompileExec208401956.dir/build
 make[1]: Entering directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 /usr/local/bin/cmake -E cmake_progress_report /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building CXX object CMakeFiles/cmTryCompileExec537235164.dir/src.cxx.o
-/usr/bin/c++    -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTryCompileExec537235164.dir/src.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx
+Building CXX object CMakeFiles/cmTryCompileExec208401956.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_HAS_DEPRECATED_ATTR   -o CMakeFiles/cmTryCompileExec208401956.dir/src.cxx.o -c /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx
 /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx: In function ‘int main()’:
 /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx:2:25: warning: ‘int somefunc()’ is deprecated (declared at /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx:1) [-Wdeprecated-declarations]
      int main() { return somefunc();}
@@ -744,9 +744,9 @@ Building CXX object CMakeFiles/cmTryCompileExec537235164.dir/src.cxx.o
 /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx:2:34: warning: ‘int somefunc()’ is deprecated (declared at /home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp/src.cxx:1) [-Wdeprecated-declarations]
      int main() { return somefunc();}
                                   ^
-Linking CXX executable cmTryCompileExec537235164
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec537235164.dir/link.txt --verbose=1
-/usr/bin/c++    -DCOMPILER_HAS_DEPRECATED_ATTR    CMakeFiles/cmTryCompileExec537235164.dir/src.cxx.o  -o cmTryCompileExec537235164 -rdynamic 
+Linking CXX executable cmTryCompileExec208401956
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec208401956.dir/link.txt --verbose=1
+/usr/bin/c++    -DCOMPILER_HAS_DEPRECATED_ATTR    CMakeFiles/cmTryCompileExec208401956.dir/src.cxx.o  -o cmTryCompileExec208401956 -rdynamic 
 make[1]: Leaving directory `/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/CMakeTmp'
 
 Source file was:
