@@ -49,7 +49,7 @@ void ApplicationSolar::render() const {
 }
 
 //Assign. 1
-void upload_planet_transforms(Planet p) {
+void ApplicationSolar::upload_planet_transforms(Planet p) {
 
   glm::fmat4 model_matrix = glm::rotate(glm::fmat4{}, float(glfwGetTime()), glm::fvec3{0.0f, 1.0f, 0.0f});
   model_matrix = glm::translate(model_matrix, glm::fvec3{0.0f, 0.0f, -1.0f});
