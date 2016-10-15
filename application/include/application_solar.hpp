@@ -5,6 +5,9 @@
 #include "model.hpp"
 #include "structs.hpp"
 
+#include "planet.hpp"
+#include <vector>
+
 // gpu representation of model
 class ApplicationSolar : public Application {
  public:
@@ -26,6 +29,9 @@ class ApplicationSolar : public Application {
   void initializeShaderPrograms();
   void initializeGeometry();
   void updateView();
+
+  // Assign. 1
+  std::vector<Planet> planets;
 
   // cpu representation of model
   model_object planet_object;
