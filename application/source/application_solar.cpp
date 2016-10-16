@@ -26,52 +26,29 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     initializeGeometry();
     initializeShaderPrograms();
 
-<<<<<<< HEAD
-    // //Sun
-    // planets.push_back(Planet{695700.0f, 0.0f, 0.0f});
-
-    // //Mercury
-    // planets.push_back(Planet{2440.0f, 1.0f, 57910000.0f});
-    // //Venus
-    // planets.push_back(Planet{6052.0f, 1.0f, 108200000.0f});
-    // //Earth
-    // planets.push_back(Planet{6371.0f, 1.0f, 149600000.0f});
-    // //Moon
-    // planets.push_back(Planet{1737.0f, 1.0f, 150000000.0f});
-    // //Mars
-    // planets.push_back(Planet{3390.0f, 1.0f, 227900000.0f});
-    // //Jupiter
-    // planets.push_back(Planet{69911.0f, 1.0f, 778500000.0f});
-    // //Saturn
-    // planets.push_back(Planet{58232.0f, 1.0f, 1433449370.0f});
-    // //Uranus
-    // planets.push_back(Planet{25362.0f, 1.0f, 2870972200.0f});
-    // //Neptune
-    // planets.push_back(Planet{24622.0f, 1.0f, 4503443661.0f});
-
     //we mentioned that the realistic solar system is not very.. pretty
     //so our solar system is not realistic scaled, but still fancy
 
     //Sun
     planets.push_back(Planet{0.8, 1, 0});
     //Mercury
-    planets.push_back(Planet{0.3, 1, 1});
+    planets.push_back(Planet{2440.0f, 1.0f, 57910000.0f});
     //Venus
-    planets.push_back(Planet{0.5, 1, 1.5});
+    planets.push_back(Planet{6052.0f, 1.0f, 108200000.0f});
     //Earth
-    planets.push_back(Planet{0.5, 1, 2});
+    planets.push_back(Planet{6371.0f, 1.0f, 149600000.0f});
     //Moon
-    planets.push_back(Planet{0.1, 1, 2.1});
+    planets.push_back(Planet{1737.0f, 1.0f, 150000000.0f});
     //Mars
-    planets.push_back(Planet{0.4, 1, 2.4});
+    planets.push_back(Planet{3390.0f, 1.0f, 227900000.0f});
     //Jupiter
-    planets.push_back(Planet{0.7, 1, 3.5});
+    planets.push_back(Planet{69911.0f, 1.0f, 778500000.0f});
     //Saturn
-    planets.push_back(Planet{0.65, 1, 4});
+    planets.push_back(Planet{58232.0f, 1.0f, 1433449370.0f});
     //Uranus
-    planets.push_back(Planet{0.6, 1, 4.5});
+    planets.push_back(Planet{25362.0f, 1.0f, 2870972200.0f});
     //Neptune
-    planets.push_back(Planet{0.6, 1, 5});
+    planets.push_back(Planet{24622.0f, 1.0f, 4503443661.0f});
 }
 
 void ApplicationSolar::render() const {
