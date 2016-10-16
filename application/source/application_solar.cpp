@@ -26,7 +26,6 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     initializeGeometry();
     initializeShaderPrograms();
 
-<<<<<<< HEAD
     // //Sun
     // planets.push_back(Planet{695700.0f, 0.0f, 0.0f});
 
@@ -53,25 +52,25 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //so our solar system is not realistic scaled, but still fancy
 
     //Sun
-    planets.push_back(Planet{0.8, 1, 0});
+    planets.push_back(Planet{0.6f, 1, 0});
     //Mercury
-    planets.push_back(Planet{0.3, 1, 1});
+    planets.push_back(Planet{0.08f, 0.47f, 0.8f});
     //Venus
-    planets.push_back(Planet{0.5, 1, 1.5});
+    planets.push_back(Planet{0.13f, 0.35f, 1.1f});
     //Earth
-    planets.push_back(Planet{0.5, 1, 2});
+    planets.push_back(Planet{0.14f, 0.3f, 1.5f});
     //Moon
-    planets.push_back(Planet{0.1, 1, 2.1});
+    planets.push_back(Planet{0.04f, 0.3f, 1.7f});
     //Mars
-    planets.push_back(Planet{0.4, 1, 2.4});
+    planets.push_back(Planet{0.11f, 0.24f, 1.95f});
     //Jupiter
-    planets.push_back(Planet{0.7, 1, 3.5});
+    planets.push_back(Planet{0.32f, 0.13f, 2.65f});
     //Saturn
-    planets.push_back(Planet{0.65, 1, 4});
+    planets.push_back(Planet{0.25f, 0.1f, 3.35f});
     //Uranus
-    planets.push_back(Planet{0.6, 1, 4.5});
+    planets.push_back(Planet{0.17f, 0.07f, 3.9f});
     //Neptune
-    planets.push_back(Planet{0.6, 1, 5});
+    planets.push_back(Planet{0.17f, 0.055f, 4.3f});
 }
 
 void ApplicationSolar::render() const {
