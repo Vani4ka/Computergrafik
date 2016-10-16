@@ -189,12 +189,13 @@ void Launcher::update_shader_programs(bool throwing) {
 ///////////////////////////// misc functions ////////////////////////////////
 // handle key input
 void Launcher::key_callback(GLFWwindow* m_window, int key, int scancode, int action, int mods) {
-  if ((key == GLFW_KEY_ESCAPE || key == GLFW_KEY_Q) && action == GLFW_PRESS) {
-    glfwSetWindowShouldClose(m_window, 1);
-  }
-  else if (key == GLFW_KEY_R && action == GLFW_PRESS) {
-    update_shader_programs(false);
-  }
+    if ((key == GLFW_KEY_ESCAPE || key == GLFW_KEY_Q) && action == GLFW_PRESS) {
+        glfwSetWindowShouldClose(m_window, 1);
+    }
+    else if (key == GLFW_KEY_R && action == GLFW_PRESS) {
+        update_shader_programs(false);
+    }
+    m_application->keyCallback(key, scancode, action, mods);
 }
 
 // calculate fps and show in m_window title
