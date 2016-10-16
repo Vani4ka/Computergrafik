@@ -68,7 +68,11 @@ void ApplicationSolar::render() const {
 void ApplicationSolar::upload_planet_transforms(Planet const& planet) const {
     glm::fmat4 model_matrix = glm::rotate(glm::fmat4{}, float(glfwGetTime()) * planet.rot_speed, glm::fvec3{0.0f, 1.0f, 0.0f});
     model_matrix = glm::translate(model_matrix, glm::fvec3{0.0f, 0.0f, - planet.orig_distance});
+<<<<<<< HEAD
     model_matrix = glm::scale(model_matrix, glm::tvec3<float>{planet.size});
+=======
+    model_matrix = glm::scale(model_matrix, glm::fvec3{planet.size});
+>>>>>>> 624de6f9c6784d8216b4dd45b05a1cafac4cd21d
 
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ModelMatrix"),
                        1, GL_FALSE, glm::value_ptr(model_matrix));
