@@ -77,6 +77,7 @@ void ApplicationSolar::render() const {
     for(auto const& planet: planets) {
         // bind shader to upload uniforms
         glUseProgram(m_shaders.at("planet").handle);
+
         upload_planet_transforms(planet);
 
         // bind the VAO to draw
@@ -100,6 +101,10 @@ void ApplicationSolar::upload_planet_transforms(Planet const& planet) const {
     glm::fmat4 normal_matrix = glm::inverseTranspose(glm::inverse(m_view_transform) * model_matrix);
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("NormalMatrix"),
                        1, GL_FALSE, glm::value_ptr(normal_matrix));
+}
+
+void ApplicationSolar::adjustCamera(){
+
 }
 
 void ApplicationSolar::updateView() {
@@ -129,7 +134,6 @@ void ApplicationSolar::uploadUniforms() {
 
 // handle key input
 void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) {
-    //std::cout<<"Key pressed\n";
     if (key == GLFW_KEY_W && action == GLFW_PRESS) {
         m_view_transform = glm::translate(m_view_transform, glm::fvec3{0.0f, 0.0f, -0.1f});
         updateView();

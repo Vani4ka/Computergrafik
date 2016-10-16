@@ -29,6 +29,8 @@ class ApplicationSolar : public Application {
   //calculates and uploads the model- and normal matrix
   void upload_planet_transforms(Planet const& planet) const;
 
+    void adjustCamera();
+
  protected:
   void initializeShaderPrograms();
   void initializeGeometry();
