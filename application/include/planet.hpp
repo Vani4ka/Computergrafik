@@ -5,14 +5,14 @@
 struct Planet {
 
 	Planet(float siz, float speed, float dist):
-		size{size},
+		size{siz},
 		rot_speed{speed},
 		orig_distance{dist}
 	{}
 
-	float size = 0;
-	float rot_speed = 0;
-	float orig_distance = 0;
+	float size;
+	float rot_speed;
+	float orig_distance;
 };
 
 #endif
