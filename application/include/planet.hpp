@@ -4,15 +4,15 @@
 //Assign. 1
 struct Planet {
 
-	Planet(float siz, float speed, float dist):
-		size{siz},
+	Planet(float scal, float speed, float dist):
+		scale{scal},
 		rot_speed{speed},
 		orig_distance{dist}
 	{}
 
-	float size;
+	float scale; //scaling factor
 	float rot_speed;
-	float orig_distance;
+    float orig_distance;
 };
 
 #endif
