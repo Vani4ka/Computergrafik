@@ -26,9 +26,8 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     initializeGeometry();
     initializeShaderPrograms();
 
-    //Sun
-    planets.push_back(Planet{695700.0f, 0.0f, 0.0f});
-
+    //sun
+    planets.push_back(Planet{0.5f, 0, 0});
     //Mercury
     planets.push_back(Planet{2440.0f, 1.0f, 57910000.0f});
     //Venus
@@ -47,7 +46,6 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     planets.push_back(Planet{25362.0f, 1.0f, 2870972200.0f});
     //Neptune
     planets.push_back(Planet{24622.0f, 1.0f, 4503443661.0f});
-
 }
 
 void ApplicationSolar::render() const {
@@ -68,11 +66,7 @@ void ApplicationSolar::render() const {
 void ApplicationSolar::upload_planet_transforms(Planet const& planet) const {
     glm::fmat4 model_matrix = glm::rotate(glm::fmat4{}, float(glfwGetTime()) * planet.rot_speed, glm::fvec3{0.0f, 1.0f, 0.0f});
     model_matrix = glm::translate(model_matrix, glm::fvec3{0.0f, 0.0f, - planet.orig_distance});
-<<<<<<< HEAD
-    model_matrix = glm::scale(model_matrix, glm::tvec3<float>{planet.size});
-=======
-    model_matrix = glm::scale(model_matrix, glm::fvec3{planet.size});
->>>>>>> 624de6f9c6784d8216b4dd45b05a1cafac4cd21d
+    model_matrix = glm::scale(model_matrix, glm::fvec3{planet.scale});
 
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ModelMatrix"),
                        1, GL_FALSE, glm::value_ptr(model_matrix));
