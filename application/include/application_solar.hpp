@@ -27,7 +27,7 @@ class ApplicationSolar : public Application {
 
   //Assign. 1 
   //calculates and uploads the model- and normal matrix
-  void upload_planet_transforms(Planet p);
+  void upload_planet_transforms(Planet const& planet) const;
 
  protected:
   void initializeShaderPrograms();
