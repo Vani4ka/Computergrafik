@@ -103,16 +103,12 @@ void ApplicationSolar::upload_planet_transforms(Planet const& planet) const {
                        1, GL_FALSE, glm::value_ptr(normal_matrix));
 }
 
-void ApplicationSolar::adjustCamera(){
-
-}
-
 void ApplicationSolar::updateView() {
-  // vertices are transformed in camera space, so camera transform must be inverted
-  glm::fmat4 view_matrix = glm::inverse(m_view_transform);
-  // upload matrix to gpu
-  glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ViewMatrix"),
-                     1, GL_FALSE, glm::value_ptr(view_matrix));
+    // vertices are transformed in camera space, so camera transform must be inverted
+    glm::fmat4 view_matrix = glm::inverse(m_view_transform);
+    // upload matrix to gpu
+    glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ViewMatrix"),
+                         1, GL_FALSE, glm::value_ptr(view_matrix));
 }
 
 void ApplicationSolar::updateProjection() {
@@ -150,6 +146,31 @@ void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) 
         m_view_transform = glm::translate(m_view_transform, glm::fvec3{0.1f, 0.0f, 0.0f});
         updateView();
     }
+}
+
+void ApplicationSolar::mouseCallback(double xpos, double ypos){
+    float mouseSpeed = 0.005f;
+
+    float horizontalAngle = mouseSpeed * (float)(xpos);
+    float verticalAngle = mouseSpeed * (float)(ypos);
+
+    view_horizontal_angle += horizontalAngle;
+    view_vertical_angle += verticalAngle;
+
+    /*glm::fvec3 direction{(float)(cos(view_vertical_angle) * sin(view_horizontal_angle)),
+                         (float)(sin(view_vertical_angle)),
+                         (float)(cos(view_vertical_angle) * cos(view_horizontal_angle))};*/
+
+    glm::fvec3 right{(float)(sin(view_horizontal_angle - M_PI/2.0f)),
+                     0,
+                     (float)(cos(view_horizontal_angle- M_PI/2.0f))};
+
+    //glm::fvec3 up = glm::cross(right, direction);
+
+    m_view_transform = glm::rotate(m_view_transform, -horizontalAngle, glm::fvec3{0.0, 1.0, 0.0});
+
+    m_view_transform = glm::rotate(m_view_transform, verticalAngle, right);
+    updateView();
 }
 
 // load shader programs

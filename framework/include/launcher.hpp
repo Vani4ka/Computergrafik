@@ -40,6 +40,9 @@ class Launcher {
   void update_shader_programs(bool throwing);
   // handle key input
   void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+  //handle mouse position
+  void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+
   // calculate fps and show in window title
   void show_fps();
   // free resources

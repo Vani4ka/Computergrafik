@@ -22,6 +22,8 @@ class ApplicationSolar : public Application {
   void updateProjection();
   // react to key input
   void keyCallback(int key, int scancode, int action, int mods);
+  // react to mouse movement
+  void mouseCallback(double xpos, double ypos);
   // draw all objects
   void render() const;
 
@@ -29,12 +31,13 @@ class ApplicationSolar : public Application {
   //calculates and uploads the model- and normal matrix
   void upload_planet_transforms(Planet const& planet) const;
 
-    void adjustCamera();
-
  protected:
   void initializeShaderPrograms();
   void initializeGeometry();
   void updateView();
+
+  float view_horizontal_angle = 0.0f;
+  float view_vertical_angle = 0.0f;
 
   // Assign. 1
   std::vector<Planet> planets;
