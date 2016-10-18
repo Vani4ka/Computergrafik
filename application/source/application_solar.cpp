@@ -58,9 +58,10 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Venus
     planets.push_back(Planet{0.13f, 0.35f, 1.1f});
     //Earth
-    planets.push_back(Planet{0.14f, 0.3f, 1.5f});
+    Planet earth = Planet{0.14f, 0.3f, 1.5f};
     //Moon
-    planets.push_back(Planet{0.04f, 0.3f, 1.7f});
+    earth.moons.push_back(Planet{0.04f, 1.0f, 0.2f});
+    planets.push_back(earth);
     //Mars
     planets.push_back(Planet{0.11f, 0.24f, 1.95f});
     //Jupiter
@@ -74,24 +75,41 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 }
 
 void ApplicationSolar::render() const {
+    //transform matrix of planet to make moons rotate around planets
+    glm::fmat4 transBase{};
     for(auto const& planet: planets) {
         // bind shader to upload uniforms
         glUseProgram(m_shaders.at("planet").handle);
 
-        upload_planet_transforms(planet);
+        transBase = uploadPlanetTransfroms(planet, glm::fmat4{});
 
         // bind the VAO to draw
         glBindVertexArray(planet_object.vertex_AO);
 
         // draw bound vertex array using bound shader
         glDrawElements(planet_object.draw_mode, planet_object.num_elements, model::INDEX.type, NULL);
+
+        for(auto const& moon: planet.moons){
+            // bind shader to upload uniforms
+            glUseProgram(m_shaders.at("planet").handle);
+
+            uploadPlanetTransfroms(moon, transBase);
+
+            // bind the VAO to draw
+            glBindVertexArray(planet_object.vertex_AO);
+
+            // draw bound vertex array using bound shader
+            glDrawElements(planet_object.draw_mode, planet_object.num_elements, model::INDEX.type, NULL);
+        }
     }
 }
 
 //Assign. 1
-void ApplicationSolar::upload_planet_transforms(Planet const& planet) const {
-    glm::fmat4 model_matrix = glm::rotate(glm::fmat4{}, float(glfwGetTime()) * planet.rot_speed*2, glm::fvec3{0.0f, 1.0f, 0.0f});
+glm::fmat4 ApplicationSolar::uploadPlanetTransfroms(Planet const &planet, glm::fmat4 const& transBase) const {
+    glm::fmat4 model_matrix = glm::rotate(transBase, float(glfwGetTime()) * planet.rot_speed*2, glm::fvec3{0.0f, 1.0f, 0.0f});
     model_matrix = glm::translate(model_matrix, glm::fvec3{0.0f, 0.0f, - planet.orig_distance});
+    glm::fmat4 moon_base = model_matrix;
+
     model_matrix = glm::scale(model_matrix, glm::fvec3{planet.scale});
 
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ModelMatrix"),
@@ -101,6 +119,8 @@ void ApplicationSolar::upload_planet_transforms(Planet const& planet) const {
     glm::fmat4 normal_matrix = glm::inverseTranspose(glm::inverse(m_view_transform) * model_matrix);
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("NormalMatrix"),
                        1, GL_FALSE, glm::value_ptr(normal_matrix));
+
+    return moon_base;
 }
 
 void ApplicationSolar::updateView() {

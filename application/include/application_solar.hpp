@@ -29,7 +29,7 @@ class ApplicationSolar : public Application {
 
   //Assign. 1 
   //calculates and uploads the model- and normal matrix
-  void upload_planet_transforms(Planet const& planet) const;
+  glm::fmat4 uploadPlanetTransfroms(Planet const& planet, glm::fmat4 const& transBase) const;
 
  protected:
   void initializeShaderPrograms();
