@@ -27,14 +27,16 @@ class ApplicationSolar : public Application {
   // draw all objects
   void render() const;
 
-  //Assign. 1 
-  //calculates and uploads the model- and normal matrix
-  glm::fmat4 uploadPlanetTransfroms(Planet const& planet, glm::fmat4 const& transBase) const;
-
  protected:
   void initializeShaderPrograms();
   void initializeGeometry();
   void updateView();
+
+  //render a specific item
+  void render(Planet const& planet, glm::fmat4& transBase) const;
+
+  // calculates and uploads the model- and normal matrix
+  void uploadPlanetTransfroms(Planet const& planet, glm::fmat4& transBase) const;
 
   float view_horizontal_angle = 0.0f;
   float view_vertical_angle = 0.0f;
