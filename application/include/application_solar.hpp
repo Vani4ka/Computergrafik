@@ -32,7 +32,7 @@ protected:
     void initializeGeometry();
     void updateView();
 
-    //render a specific item
+    //render a specific planet (or moon)
     void render(Planet const& planet, glm::fmat4& transBase) const;
 
     // calculates and uploads the model- and normal matrix
@@ -44,8 +44,12 @@ protected:
     // Assign. 1
     std::vector<Planet> planets;
 
+    // Assign. 2
+    std::vector<float> stars;
+
     // cpu representation of model
     model_object planet_object;
+    model_object star_object;
 };
 
 #endif
