@@ -23,9 +23,6 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
         :Application{resource_path}
         ,planet_object{}
 {
-    initializeGeometry();
-    initializeShaderPrograms();
-
     // //Sun
     // planets.push_back(Planet{695700.0f, 0.0f, 0.0f});
 
@@ -73,17 +70,32 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Neptune
     planets.push_back(Planet{0.17f, 0.055f, 4.3f});
 
-    for(int i=0; i < 100; i++){
+    for(int i=0; i < 1000; i++){
         //coordinates X, Y, Z
         for(int j = 0; j < 3; j++){
-            stars.push_back(rand()%100);
+            stars.push_back(
+                    static_cast<float> (rand()) /
+                            (RAND_MAX / (20.0f)) - 10.0f
+            );
         }
 
         //colors R, G, B
         for(int j = 0; j < 3; j++){
-            stars.push_back(rand() % 256);
+            stars.push_back(static_cast<float>(rand())/ RAND_MAX);
         }
     }
+
+    for(Planet const& planet: planets){
+        for (int i = 1; i < 720; ++i) {
+            float rad = float(i*M_PI)/180.0f;
+            orbit_vertices.push_back((float)(cos(rad)*planet.orig_distance));
+            orbit_vertices.push_back(0.0f);
+            orbit_vertices.push_back((float)(sin(rad)*planet.orig_distance));
+        }
+    }
+
+    initializeGeometry();
+    initializeShaderPrograms();
 }
 
 void ApplicationSolar::render() const {
@@ -96,6 +108,20 @@ void ApplicationSolar::render() const {
             render(moon, transBase);
         }
     }
+    renderOrbit();
+    renderStars();
+}
+
+void ApplicationSolar::renderStars() const {
+    glUseProgram(m_shaders.at("star").handle);
+    glBindVertexArray(star_object.vertex_AO);
+    glDrawArrays(star_object.draw_mode, 0, star_object.num_elements);
+}
+
+void ApplicationSolar::renderOrbit() const {
+    glUseProgram(m_shaders.at("orbit").handle);
+    glBindVertexArray(orbit_object.vertex_AO);
+    glDrawArrays(orbit_object.draw_mode, 0, orbit_object.num_elements);
 }
 
 void ApplicationSolar::render(Planet const& planet, glm::fmat4& transBase) const {
@@ -131,30 +157,40 @@ void ApplicationSolar::uploadPlanetTransfroms(Planet const &planet, glm::fmat4& 
 void ApplicationSolar::updateView() {
     // vertices are transformed in camera space, so camera transform must be inverted
     glm::fmat4 view_matrix = glm::inverse(m_view_transform);
+
+    // bind new shader
+    glUseProgram(m_shaders.at("planet").handle);
     // upload matrix to gpu
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ViewMatrix"),
                        1, GL_FALSE, glm::value_ptr(view_matrix));
 
+    glUseProgram(m_shaders.at("star").handle);
     glUniformMatrix4fv(m_shaders.at("star").u_locs.at("ViewMatrix"),
+                       1, GL_FALSE, glm::value_ptr(view_matrix));
+
+    glUseProgram(m_shaders.at("orbit").handle);
+    glUniformMatrix4fv(m_shaders.at("orbit").u_locs.at("ViewMatrix"),
                        1, GL_FALSE, glm::value_ptr(view_matrix));
 }
 
 void ApplicationSolar::updateProjection() {
+    glUseProgram(m_shaders.at("planet").handle);
     // upload matrix to gpu
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ProjectionMatrix"),
                        1, GL_FALSE, glm::value_ptr(m_view_projection));
 
+    glUseProgram(m_shaders.at("star").handle);
     glUniformMatrix4fv(m_shaders.at("star").u_locs.at("ProjectionMatrix"),
+                       1, GL_FALSE, glm::value_ptr(m_view_projection));
+
+    glUseProgram(m_shaders.at("orbit").handle);
+    glUniformMatrix4fv(m_shaders.at("orbit").u_locs.at("ProjectionMatrix"),
                        1, GL_FALSE, glm::value_ptr(m_view_projection));
 }
 
 // update uniform locations
 void ApplicationSolar::uploadUniforms() {
     updateUniformLocations();
-
-    // bind new shader
-    glUseProgram(m_shaders.at("planet").handle);
-    glUseProgram(m_shaders.at("star").handle);
 
     updateView();
     updateProjection();
@@ -220,8 +256,14 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.emplace("star", shader_program{m_resource_path + "shaders/stars.vert",
                                              m_resource_path + "shaders/stars.frag"});
 
-    m_shaders.at("star").u_locs["ViewMatrix"] = -1;
     m_shaders.at("star").u_locs["ProjectionMatrix"] = -1;
+    m_shaders.at("star").u_locs["ViewMatrix"] = -1;
+
+    m_shaders.emplace("orbit", shader_program{m_resource_path + "shaders/orbit.vert",
+                                              m_resource_path+"shaders/orbit.frag"});
+
+    m_shaders.at("orbit").u_locs["ProjectionMatrix"] = -1;
+    m_shaders.at("orbit").u_locs["ViewMatrix"] = -1;
 }
 
 // load models
@@ -263,14 +305,14 @@ void ApplicationSolar::initializeGeometry() {
 
 
     //Assign. 2
-    glGenVertexArrays(1, &star_object.vertex_AO);
-    glBindVertexArray(star_object.vertex_AO);
-
+    //stars
     glGenBuffers(1, &star_object.vertex_BO);
     glBindBuffer(GL_ARRAY_BUFFER, star_object.vertex_BO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(float) * stars.size(), stars.data(), GL_STATIC_DRAW);
 
-//    glBindBuffer(GL_ARRAY_BUFFER, star_object.vertex_BO);
+    glGenVertexArrays(1, &star_object.vertex_AO);
+    glBindVertexArray(star_object.vertex_AO);
+    glBindBuffer(GL_ARRAY_BUFFER, star_object.vertex_BO);
 
     //position
     glEnableVertexAttribArray(2);
@@ -281,6 +323,24 @@ void ApplicationSolar::initializeGeometry() {
     glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 
     star_object.draw_mode = GL_POINTS;
+    star_object.num_elements = GLsizei(stars.size() / 6);
+
+    glEnable(GL_PROGRAM_POINT_SIZE);
+
+    //orbits
+    glGenBuffers(1, &orbit_object.vertex_BO);
+    glBindBuffer(GL_ARRAY_BUFFER, orbit_object.vertex_BO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * orbit_vertices.size(), orbit_vertices.data(), GL_STATIC_DRAW);
+
+    glGenVertexArrays(1, &orbit_object.vertex_AO);
+    glBindVertexArray(orbit_object. vertex_AO);
+    glBindBuffer(GL_ARRAY_BUFFER, orbit_object.vertex_BO);
+
+    glEnableVertexAttribArray(4);
+    glVertexAttribPointer(4,3,GL_FLOAT, GL_FALSE, 3*sizeof(float), 0);
+
+    orbit_object.draw_mode = GL_LINE_LOOP;
+    orbit_object.num_elements = GLsizei(orbit_vertices.size() / 3);
 }
 
 ApplicationSolar::~ApplicationSolar() {

@@ -34,6 +34,10 @@ protected:
 
     //render a specific planet (or moon)
     void render(Planet const& planet, glm::fmat4& transBase) const;
+    //draws the planet orbits
+    void renderOrbit() const;
+    //render stars
+    void renderStars() const;
 
     // calculates and uploads the model- and normal matrix
     void uploadPlanetTransfroms(Planet const& planet, glm::fmat4& transBase) const;
@@ -47,9 +51,13 @@ protected:
     // Assign. 2
     std::vector<float> stars;
 
+    std::vector<float> orbit_vertices;
+
+
     // cpu representation of model
     model_object planet_object;
     model_object star_object;
+    model_object orbit_object;
 };
 
 #endif

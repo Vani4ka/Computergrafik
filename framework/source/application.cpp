@@ -35,6 +35,7 @@ void Application::updateUniformLocations() {
     for (auto& uniform : pair.second.u_locs) {
       // store uniform location in map
       uniform.second = utils::glGetUniformLocation(pair.second.handle, uniform.first.c_str());
+      std::cout<<pair.first<<": "<<uniform.second<<"\n";
     }
   }
 }
