@@ -75,24 +75,33 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
         for(int j = 0; j < 3; j++){
             stars.push_back(
                     static_cast<float> (rand()) /
-                            (RAND_MAX / (20.0f)) - 10.0f
+                            (static_cast<float>(RAND_MAX) / (20.0f)) - 10.0f
             );
         }
 
         //colors R, G, B
         for(int j = 0; j < 3; j++){
-            stars.push_back(static_cast<float>(rand())/ RAND_MAX);
+            stars.push_back(static_cast<float>(rand())/
+                                    static_cast<float>(RAND_MAX));
         }
     }
 
-    for(Planet const& planet: planets){
-        for (int i = 1; i < 720; ++i) {
-            float rad = float(i*M_PI)/180.0f;
-            orbit_vertices.push_back((float)(cos(rad)*planet.orig_distance));
-            orbit_vertices.push_back(0.0f);
-            orbit_vertices.push_back((float)(sin(rad)*planet.orig_distance));
-        }
+    float x, z;
+    for (int i = 0; i < 360; i+=1) {
+        float rad = float(i*M_PI)/180.0f;
+
+        x = (float)(cos(rad));
+        z = (float)(sin(rad));
+
+        orbit_vertices.push_back(x);
+        orbit_vertices.push_back(0.0f);
+        orbit_vertices.push_back(z);
+
+        std::cout<<"("<<x<<", "<<0<<", "<<z<<")\n";
     }
+
+    std::cout<<orbit_vertices.size()<<"\n";
+
 
     initializeGeometry();
     initializeShaderPrograms();
@@ -102,13 +111,15 @@ void ApplicationSolar::render() const {
     for(auto const& planet: planets) {
         //transform matrix of planet to make moons rotate around planets
         glm::fmat4 transBase{};
-        render(planet, transBase);
+        renderPlanet(planet, transBase);
 
         for(auto const& moon: planet.moons){
-            render(moon, transBase);
+            renderPlanet(moon, transBase);
         }
+
+        renderOrbit(planet.orig_distance);
     }
-    renderOrbit();
+
     renderStars();
 }
 
@@ -118,17 +129,18 @@ void ApplicationSolar::renderStars() const {
     glDrawArrays(star_object.draw_mode, 0, star_object.num_elements);
 }
 
-void ApplicationSolar::renderOrbit() const {
+void ApplicationSolar::renderOrbit(float radius) const {
     glUseProgram(m_shaders.at("orbit").handle);
+    uploadOrbitTransforms(radius);
     glBindVertexArray(orbit_object.vertex_AO);
     glDrawArrays(orbit_object.draw_mode, 0, orbit_object.num_elements);
 }
 
-void ApplicationSolar::render(Planet const& planet, glm::fmat4& transBase) const {
+void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase) const {
     // bind shader to upload uniforms
     glUseProgram(m_shaders.at("planet").handle);
 
-    uploadPlanetTransfroms(planet, transBase);
+    uploadPlanetTransforms(planet, transBase);
 
     // bind the VAO to draw
     glBindVertexArray(planet_object.vertex_AO);
@@ -138,7 +150,7 @@ void ApplicationSolar::render(Planet const& planet, glm::fmat4& transBase) const
 }
 
 //Assign. 1
-void ApplicationSolar::uploadPlanetTransfroms(Planet const &planet, glm::fmat4& transBase) const {
+void ApplicationSolar::uploadPlanetTransforms(Planet const &planet, glm::fmat4& transBase) const {
     glm::fmat4 model_matrix = glm::rotate(transBase, float(glfwGetTime()) * planet.rot_speed*2, glm::fvec3{0.0f, 1.0f, 0.0f});
     model_matrix = glm::translate(model_matrix, glm::fvec3{0.0f, 0.0f, - planet.orig_distance});
     transBase = model_matrix;
@@ -152,6 +164,13 @@ void ApplicationSolar::uploadPlanetTransfroms(Planet const &planet, glm::fmat4& 
     glm::fmat4 normal_matrix = glm::inverseTranspose(glm::inverse(m_view_transform) * model_matrix);
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("NormalMatrix"),
                        1, GL_FALSE, glm::value_ptr(normal_matrix));
+}
+
+void ApplicationSolar::uploadOrbitTransforms(float radius) const {
+    glm::fmat4 model_matrix = glm::scale(glm::fmat4{}, glm::fvec3{radius, 0.0f, radius});
+
+    glUniformMatrix4fv(m_shaders.at("orbit").u_locs.at("ModelMatrix"),
+                       1, GL_FALSE, glm::value_ptr(model_matrix));
 }
 
 void ApplicationSolar::updateView() {
@@ -264,6 +283,7 @@ void ApplicationSolar::initializeShaderPrograms() {
 
     m_shaders.at("orbit").u_locs["ProjectionMatrix"] = -1;
     m_shaders.at("orbit").u_locs["ViewMatrix"] = -1;
+    m_shaders.at("orbit").u_locs["ModelMatrix"] = -1;
 }
 
 // load models
@@ -304,7 +324,7 @@ void ApplicationSolar::initializeGeometry() {
     planet_object.num_elements = GLsizei(planet_model.indices.size());
 
 
-    //Assign. 2
+    /** ASSIGNMENT 2 **/
     //stars
     glGenBuffers(1, &star_object.vertex_BO);
     glBindBuffer(GL_ARRAY_BUFFER, star_object.vertex_BO);

@@ -33,14 +33,17 @@ protected:
     void updateView();
 
     //render a specific planet (or moon)
-    void render(Planet const& planet, glm::fmat4& transBase) const;
+    void renderPlanet(Planet const& planet, glm::fmat4& transBase) const;
     //draws the planet orbits
-    void renderOrbit() const;
+    void renderOrbit(float radius) const;
     //render stars
     void renderStars() const;
 
-    // calculates and uploads the model- and normal matrix
-    void uploadPlanetTransfroms(Planet const& planet, glm::fmat4& transBase) const;
+    // calculates and uploads the model- and normal matrix for planet
+    void uploadPlanetTransforms(Planet const& planet, glm::fmat4& transBase) const;
+
+    // calculates and uploads the modelmatrix for the orbits
+    void uploadOrbitTransforms(float radius) const;
 
     float view_horizontal_angle = 0.0f;
     float view_vertical_angle = 0.0f;
