@@ -96,12 +96,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
         orbit_vertices.push_back(x);
         orbit_vertices.push_back(0.0f);
         orbit_vertices.push_back(z);
-
-        std::cout<<"("<<x<<", "<<0<<", "<<z<<")\n";
     }
-
-    std::cout<<orbit_vertices.size()<<"\n";
-
 
     initializeGeometry();
     initializeShaderPrograms();
@@ -233,6 +228,14 @@ void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) 
         m_view_transform = glm::translate(m_view_transform, glm::fvec3{0.1f, 0.0f, 0.0f});
         updateView();
     }
+    else if (key == GLFW_KEY_KP_ADD && action == GLFW_PRESS){
+        m_view_transform = glm::translate(m_view_transform, glm::fvec3{0.0f, 0.1f, 0.0f});
+        updateView();
+    }
+    else if (key == GLFW_KEY_KP_SUBTRACT && action == GLFW_PRESS){
+        m_view_transform = glm::translate(m_view_transform, glm::fvec3{0.0f, -0.1f, 0.0f});
+        updateView();
+    }
 }
 
 void ApplicationSolar::mouseCallback(double xpos, double ypos){
@@ -257,6 +260,7 @@ void ApplicationSolar::mouseCallback(double xpos, double ypos){
     m_view_transform = glm::rotate(m_view_transform, -horizontalAngle, glm::fvec3{0.0, 1.0, 0.0});
 
     m_view_transform = glm::rotate(m_view_transform, verticalAngle, right);
+//    m_view_transform = glm::rotate(m_view_transform, verticalAngle, glm::fvec3{1.0f, 0.0f, 0.0f});
     updateView();
 }
 
