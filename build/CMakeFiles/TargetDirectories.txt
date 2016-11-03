@@ -1,0 +1,4 @@
+/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/framework.dir
+/home/vanya/WS16-17/Computergrafik/Computergrafik/build/CMakeFiles/solar_system.dir
+/home/vanya/WS16-17/Computergrafik/Computergrafik/build/external/glbinding-2.1.1/source/glbinding/CMakeFiles/glbinding.dir
+/home/vanya/WS16-17/Computergrafik/Computergrafik/build/external/glfw-3.1.1/src/CMakeFiles/glfw.dir
