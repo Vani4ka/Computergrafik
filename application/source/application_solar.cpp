@@ -97,6 +97,9 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
         orbit_vertices.push_back(0.0f);
         orbit_vertices.push_back(z);
     }
+    
+    view_horizontal_angle = 0.0f;
+    view_vertical_angle = 0.0f;
 
     initializeGeometry();
     initializeShaderPrograms();
@@ -261,6 +264,8 @@ void ApplicationSolar::mouseCallback(double xpos, double ypos){
 
     m_view_transform = glm::rotate(m_view_transform, verticalAngle, right);
 //    m_view_transform = glm::rotate(m_view_transform, verticalAngle, glm::fvec3{1.0f, 0.0f, 0.0f});
+
+    //m_view_transform = glm::translate(m_view_transform, view_current_translation);
     updateView();
 }
 

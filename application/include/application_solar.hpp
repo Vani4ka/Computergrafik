@@ -45,8 +45,8 @@ protected:
     // calculates and uploads the modelmatrix for the orbits
     void uploadOrbitTransforms(float radius) const;
 
-    float view_horizontal_angle = 0.0f;
-    float view_vertical_angle = 0.0f;
+    float view_horizontal_angle;
+    float view_vertical_angle;
 
     // Assign. 1
     std::vector<Planet> planets;
