@@ -9,14 +9,14 @@ in vec3 pass_LightPos;
 in vec3 pass_Color;
 vec3 ambientColor = pass_Color;
 vec3 specularColor = vec3(1.0f, 1.0f, 1.0f);
-float b = 5.0f;
+float b = 15.0f;
 
 out vec4 out_Color;
 
 void main() {
     vec3 lightDir = pass_LightPos - pass_VertPos;
     vec3 viewDir = -pass_VertPos;
-    vec3 halfDir =  lightDir + viewDir;
+    vec3 halfDir =  normalize(lightDir) + normalize(viewDir);
 
     float diffuseAngle = dot(normalize(lightDir), normalize(pass_Normal));
     float specularAngle = dot(normalize(pass_Normal), normalize(halfDir));

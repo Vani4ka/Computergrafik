@@ -184,8 +184,10 @@ void ApplicationSolar::updateView() {
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ViewMatrix"),
                        1, GL_FALSE, glm::value_ptr(view_matrix));
 
+    glm::fvec4 lightPos = view_matrix * glm::fvec4{0.0f, 0.0f, 0.0f, 1.0};
+
     glUniform3fv(m_shaders.at("planet").u_locs.at("LightPosition"),
-                        1, glm::value_ptr(glm::fvec3{0.0,0.0,0.0}));
+                        1, glm::value_ptr(glm::fvec3{lightPos}));
 
     glUseProgram(m_shaders.at("star").handle);
     glUniformMatrix4fv(m_shaders.at("star").u_locs.at("ViewMatrix"),
