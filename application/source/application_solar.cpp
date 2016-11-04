@@ -49,26 +49,26 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //so our solar system is not realistic scaled, but still fancy
 
     //Sun
-    planets.push_back(Planet{0.6f, 1, 0});
+    planets.push_back(Planet{0.6f, 1, 0, {0.5f,0.6f,0.7f}});
     //Mercury
-    planets.push_back(Planet{0.08f, 0.47f, 0.8f});
+    planets.push_back(Planet{0.08f, 0.47f, 0.8f, {0.5f,0.3f,0.4f}});
     //Venus
-    planets.push_back(Planet{0.13f, 0.35f, 1.1f});
+    planets.push_back(Planet{0.13f, 0.35f, 1.1f, {0.8f,0.6f,0.4f}});
     //Earth
-    Planet earth = Planet{0.14f, 0.3f, 1.5f};
+    Planet earth = Planet{0.14f, 0.3f, 1.5f, {0.8f,0.3f,0.2f}};
     //Moon
-    earth.moons.push_back(Planet{0.04f, 1.0f, 0.2f});
+    earth.moons.push_back(Planet{0.04f, 1.0f, 0.2f, {0.3f,0.6f,0.1f}});
     planets.push_back(earth);
     //Mars
-    planets.push_back(Planet{0.11f, 0.24f, 1.95f});
+    planets.push_back(Planet{0.11f, 0.24f, 1.95f, {0.2f,0.9f,0.5f}});
     //Jupiter
-    planets.push_back(Planet{0.32f, 0.13f, 2.65f});
+    planets.push_back(Planet{0.32f, 0.13f, 2.65f, {0.8f,0.3f,0.7f}});
     //Saturn
-    planets.push_back(Planet{0.25f, 0.1f, 3.35f});
+    planets.push_back(Planet{0.25f, 0.1f, 3.35f, {0.3f,0.7f,0.4f}});
     //Uranus
-    planets.push_back(Planet{0.17f, 0.07f, 3.9f});
+    planets.push_back(Planet{0.17f, 0.07f, 3.9f, {0.8f,0.1f,0.2f}});
     //Neptune
-    planets.push_back(Planet{0.17f, 0.055f, 4.3f});
+    planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.1f,0.6f,0.3f}});
 
     for(int i=0; i < 1000; i++){
         //coordinates X, Y, Z
@@ -139,6 +139,9 @@ void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase)
     glUseProgram(m_shaders.at("planet").handle);
 
     uploadPlanetTransforms(planet, transBase);
+
+    //Assign. 3 color upload
+    glUniform3fv(m_shaders.at("planet").u_locs.at("DiffuseColor"), 1, glm::value_ptr(planet.color));
 
     // bind the VAO to draw
     glBindVertexArray(planet_object.vertex_AO);
@@ -280,6 +283,7 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("planet").u_locs["ModelMatrix"] = -1;
     m_shaders.at("planet").u_locs["ViewMatrix"] = -1;
     m_shaders.at("planet").u_locs["ProjectionMatrix"] = -1;
+    m_shaders.at("planet").u_locs["DiffuseColor"] = -1;
 
     m_shaders.emplace("star", shader_program{m_resource_path + "shaders/stars.vert",
                                              m_resource_path + "shaders/stars.frag"});
