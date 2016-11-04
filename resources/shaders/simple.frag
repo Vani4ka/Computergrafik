@@ -11,6 +11,10 @@ vec3 ambientColor = pass_Color;
 vec3 specularColor = vec3(1.0f, 1.0f, 1.0f);
 float b = 15.0f;
 
+float diffuseMaterial = 1.0f;
+float ambientMaterial = 1.0f;
+float specularMaterial = 1.0f;
+
 out vec4 out_Color;
 
 void main() {
@@ -21,7 +25,7 @@ void main() {
     float diffuseAngle = dot(normalize(lightDir), normalize(pass_Normal));
     float specularAngle = dot(normalize(pass_Normal), normalize(halfDir));
 
-    vec3 illumination = ambientColor + pass_Color * diffuseAngle + specularColor * pow(specularAngle, b);
+    vec3 illumination = ambientMaterial * ambientColor + diffuseMaterial * pass_Color * diffuseAngle + specularMaterial * specularColor * pow(specularAngle, b);
 
     out_Color = vec4(illumination, 1.0);
 }
