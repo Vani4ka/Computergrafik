@@ -97,7 +97,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
         orbit_vertices.push_back(0.0f);
         orbit_vertices.push_back(z);
     }
-    
+
     view_horizontal_angle = 0.0f;
     view_vertical_angle = 0.0f;
 
@@ -183,6 +183,9 @@ void ApplicationSolar::updateView() {
     // upload matrix to gpu
     glUniformMatrix4fv(m_shaders.at("planet").u_locs.at("ViewMatrix"),
                        1, GL_FALSE, glm::value_ptr(view_matrix));
+
+    glUniform3fv(m_shaders.at("planet").u_locs.at("LightPosition"),
+                        1, glm::value_ptr(glm::fvec3{0.0,0.0,0.0}));
 
     glUseProgram(m_shaders.at("star").handle);
     glUniformMatrix4fv(m_shaders.at("star").u_locs.at("ViewMatrix"),
@@ -284,6 +287,7 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("planet").u_locs["ViewMatrix"] = -1;
     m_shaders.at("planet").u_locs["ProjectionMatrix"] = -1;
     m_shaders.at("planet").u_locs["DiffuseColor"] = -1;
+    m_shaders.at("planet").u_locs["LightPosition"] = -1;
 
     m_shaders.emplace("star", shader_program{m_resource_path + "shaders/stars.vert",
                                              m_resource_path + "shaders/stars.frag"});
