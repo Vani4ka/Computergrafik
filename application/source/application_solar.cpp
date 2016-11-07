@@ -49,26 +49,26 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //so our solar system is not realistic scaled, but still fancy
 
     //Sun
-    planets.push_back(Planet{0.6f, 1, 0, {0.5f,0.6f,0.7f}});
+    planets.push_back(Planet{0.6f, 1, 0, {1.0f, 0.647f,0.0f}});
     //Mercury
-    planets.push_back(Planet{0.08f, 0.47f, 0.8f, {0.5f,0.3f,0.4f}});
+    planets.push_back(Planet{0.08f, 0.47f, 0.8f, {0.592f,0.509f,0.662f}});
     //Venus
-    planets.push_back(Planet{0.13f, 0.35f, 1.1f, {0.8f,0.6f,0.4f}});
+    planets.push_back(Planet{0.13f, 0.35f, 1.1f, {0.8f,0.57f,0.035f}});
     //Earth
-    Planet earth = Planet{0.14f, 0.3f, 1.5f, {0.8f,0.3f,0.2f}};
+    Planet earth = Planet{0.14f, 0.3f, 1.5f, {0.08f,0.27f,0.61f}};
     //Moon
-    earth.moons.push_back(Planet{0.04f, 1.0f, 0.2f, {0.3f,0.6f,0.1f}});
+    earth.moons.push_back(Planet{0.04f, 1.0f, 0.2f, {0.77f,0.789f,0.82f}});
     planets.push_back(earth);
     //Mars
-    planets.push_back(Planet{0.11f, 0.24f, 1.95f, {0.2f,0.9f,0.5f}});
+    planets.push_back(Planet{0.11f, 0.24f, 1.95f, {0.9f,0.356f,0.043f}});
     //Jupiter
-    planets.push_back(Planet{0.32f, 0.13f, 2.65f, {0.8f,0.3f,0.7f}});
+    planets.push_back(Planet{0.32f, 0.13f, 2.65f, {0.46f,0.33f,0.18f}});
     //Saturn
-    planets.push_back(Planet{0.25f, 0.1f, 3.35f, {0.3f,0.7f,0.4f}});
+    planets.push_back(Planet{0.25f, 0.1f, 3.35f, {0.46f,0.4f,0.325f}});
     //Uranus
-    planets.push_back(Planet{0.17f, 0.07f, 3.9f, {0.8f,0.1f,0.2f}});
+    planets.push_back(Planet{0.17f, 0.07f, 3.9f, {0.1f,0.56f,0.9f}});
     //Neptune
-    planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.1f,0.6f,0.3f}});
+    planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});
 
     for(int i=0; i < 1000; i++){
         //coordinates X, Y, Z
@@ -102,7 +102,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     view_vertical_angle = 0.0f;
 
     //1 for blinn-phong
-    shadingMode = 2;
+    shadingMode = 1;
 
     initializeGeometry();
     initializeShaderPrograms();
