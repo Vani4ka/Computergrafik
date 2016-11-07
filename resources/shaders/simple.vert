@@ -10,23 +10,16 @@ uniform mat4 ViewMatrix;
 uniform mat4 ProjectionMatrix;
 uniform mat4 NormalMatrix;
 
-uniform vec3 DiffuseColor;
-uniform vec3 LightPosition;
-
 out vec3 pass_Normal;
-out vec3 pass_Color;
 out vec3 pass_VertPos;
-out vec3 pass_LightPos;
 
 void main(void)
 {
 	gl_Position = (ProjectionMatrix  * ViewMatrix * ModelMatrix) * vec4(in_Position, 1.0);
 	pass_Normal = (NormalMatrix * vec4(in_Normal, 0.0)).xyz;
-	pass_Color = DiffuseColor;
+
 	vec4 homoVertPos = ViewMatrix * ModelMatrix * vec4(in_Position, 1.0);
 
 	//Convert to euclidean coordinates
 	pass_VertPos = (homoVertPos / homoVertPos.w).xyz;
-
-	pass_LightPos = LightPosition;
 }

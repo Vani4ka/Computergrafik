@@ -101,6 +101,9 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     view_horizontal_angle = 0.0f;
     view_vertical_angle = 0.0f;
 
+    //1 for blinn-phong
+    shadingMode = 2;
+
     initializeGeometry();
     initializeShaderPrograms();
 }
@@ -142,6 +145,9 @@ void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase)
 
     //Assign. 3 color upload
     glUniform3fv(m_shaders.at("planet").u_locs.at("DiffuseColor"), 1, glm::value_ptr(planet.color));
+
+    //upload shading mode
+    glUniform1i(m_shaders.at("planet").u_locs.at("ShadingMode"), shadingMode);
 
     // bind the VAO to draw
     glBindVertexArray(planet_object.vertex_AO);
@@ -247,6 +253,14 @@ void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) 
         m_view_transform = glm::translate(m_view_transform, glm::fvec3{0.0f, -0.1f, 0.0f});
         updateView();
     }
+    else if (key == GLFW_KEY_1 && action == GLFW_PRESS){
+        //use blinn-phong shader
+        shadingMode = 1;
+    }
+    else if (key == GLFW_KEY_2 && action == GLFW_PRESS){
+        //use cel shader
+        shadingMode = 2;
+    }
 }
 
 void ApplicationSolar::mouseCallback(double xpos, double ypos){
@@ -290,6 +304,7 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("planet").u_locs["ProjectionMatrix"] = -1;
     m_shaders.at("planet").u_locs["DiffuseColor"] = -1;
     m_shaders.at("planet").u_locs["LightPosition"] = -1;
+    m_shaders.at("planet").u_locs["ShadingMode"] = -1;
 
     m_shaders.emplace("star", shader_program{m_resource_path + "shaders/stars.vert",
                                              m_resource_path + "shaders/stars.frag"});

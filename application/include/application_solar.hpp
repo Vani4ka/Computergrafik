@@ -56,6 +56,8 @@ protected:
 
     std::vector<float> orbit_vertices;
 
+    //shader choice
+    int shadingMode;
 
     // cpu representation of model
     model_object planet_object;
