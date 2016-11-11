@@ -347,7 +347,20 @@ GLenum ApplicationSolar::getTextureUnit(int i) const {
 
 
 void ApplicationSolar::initializeTextures() {
+    for(int i=0; i < planets.size(); i++){
+        texture_object tex_object;
 
+        glActiveTexture(getTextureUnit(i));
+        glGenTextures(1, &tex_object.handle);
+        glBindTexture(GL_TEXTURE_2D, tex_object.handle);
+
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        //glTexImage2D(GL_TEXTURE_2D, 0, planets[i].texture.channels, planets[i].texture.width, planets[i].texture.height, 0, GL_RGBA, )
+
+        tex_object.target = getTextureUnit(i);
+    }
 }
 
 // load shader programs

@@ -60,6 +60,8 @@ protected:
 
     std::vector<float> orbit_vertices;
 
+    std::vector<texture_object> texture_objects;
+
     //shader choice
     int shadingMode;
 
