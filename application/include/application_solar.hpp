@@ -46,6 +46,9 @@ protected:
     // calculates and uploads the modelmatrix for the orbits
     void uploadOrbitTransforms(float radius) const;
 
+    //
+    GLenum getTextureUnit(int i) const;
+
     float view_horizontal_angle;
     float view_vertical_angle;
 

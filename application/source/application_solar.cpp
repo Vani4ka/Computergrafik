@@ -329,6 +329,23 @@ void ApplicationSolar::mouseCallback(double xpos, double ypos){
     updateView();
 }
 
+GLenum ApplicationSolar::getTextureUnit(int i) const {
+    switch(i) {
+        case 0: return GL_TEXTURE0;
+        case 1: return GL_TEXTURE1;
+        case 2: return GL_TEXTURE2;
+        case 3: return GL_TEXTURE3;
+        case 4: return GL_TEXTURE4;
+        case 5: return GL_TEXTURE5;
+        case 6: return GL_TEXTURE6;
+        case 7: return GL_TEXTURE7;
+        case 8: return GL_TEXTURE8;
+        case 9: return GL_TEXTURE9;
+        case 10: return GL_TEXTURE10;
+    }
+}
+
+
 void ApplicationSolar::initializeTextures() {
 
 }
