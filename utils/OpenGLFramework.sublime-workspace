@@ -1,1 +1,927 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"u",
+				"u_locs"
+			],
+			[
+				"r",
+				"readline"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"m",
+				"m_node"
+			],
+			[
+				"m_",
+				"m_node"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"ve",
+				"vec3"
+			],
+			[
+				"mn",
+				"m_node"
+			],
+			[
+				"st",
+				"std"
+			],
+			[
+				"te",
+				"TEST_CASE"
+			],
+			[
+				"beg",
+				"begin"
+			],
+			[
+				"Lis",
+				"ListNode"
+			],
+			[
+				"push",
+				"push_back"
+			],
+			[
+				"pus",
+				"push_back"
+			],
+			[
+				"Li",
+				"List"
+			],
+			[
+				"next",
+				"m_next"
+			],
+			[
+				"i",
+				"include"
+			],
+			[
+				"List",
+				"ListIterator"
+			],
+			[
+				"ty",
+				"typedef"
+			],
+			[
+				"p",
+				"push_front"
+			],
+			[
+				"value",
+				"m_value"
+			],
+			[
+				"L",
+				"List"
+			],
+			[
+				"x",
+				"x2_"
+			],
+			[
+				"x1",
+				"x1_"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"be",
+				"begin"
+			],
+			[
+				"se",
+				"setColor"
+			],
+			[
+				"get",
+				"gety"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"rad",
+				"radius_"
+			],
+			[
+				"col",
+				"color_"
+			],
+			[
+				"l",
+				"length_"
+			],
+			[
+				"h",
+				"height_"
+			],
+			[
+				"co",
+				"color_"
+			],
+			[
+				"fo",
+				"float"
+			],
+			[
+				"M",
+				"MAT2_HPP"
+			],
+			[
+				"ge",
+				"getx2"
+			],
+			[
+				"y2",
+				"y2_"
+			],
+			[
+				"y1",
+				"y1_"
+			],
+			[
+				"su",
+				"sumMultiples"
+			],
+			[
+				"add",
+				"addChild"
+			],
+			[
+				"chi",
+				"childR"
+			],
+			[
+				"chil",
+				"childL"
+			],
+			[
+				"ch",
+				"childL"
+			],
+			[
+				"child",
+				"childR"
+			],
+			[
+				"tree",
+				"treeFun"
+			],
+			[
+				"make",
+				"makeLeave"
+			],
+			[
+				"t",
+				"t"
+			],
+			[
+				"e",
+				"endl"
+			],
+			[
+				"pr",
+				"printBinTree"
+			],
+			[
+				"c",
+				"cout"
+			],
+			[
+				"is",
+				"is_prime"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"n",
+				"none"
+			],
+			[
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"onm",
+				"onmouseout	Attr"
+			],
+			[
+				"onmous",
+				"onmouseout	Attr"
+			],
+			[
+				"onmou",
+				"onmouseover	Attr"
+			],
+			[
+				"inli",
+				"inline"
+			],
+			[
+				"list",
+				"listElement"
+			],
+			[
+				"cre",
+				"createH1"
+			],
+			[
+				"b",
+				"body"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"hre",
+				"hrefs"
+			],
+			[
+				"new",
+				"newParagraph"
+			],
+			[
+				"para",
+				"paragraph"
+			],
+			[
+				"ad",
+				"addHeading"
+			],
+			[
+				"he",
+				"headingTag"
+			],
+			[
+				"hea",
+				"headingClass"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
+				"br",
+				"break"
+			],
+			[
+				"T",
+				"Thursday"
+			],
+			[
+				"nu",
+				"numberTwo"
+			],
+			[
+				"num",
+				"numberOne"
+			],
+			[
+				"my",
+				"myPersonalData"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"fir",
+				"firstName"
+			],
+			[
+				"fi",
+				"firstNum"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"bor",
+				"border-collapse"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
+				"margi",
+				"margin-right"
+			],
+			[
+				"a",
+				"auto"
+			],
+			[
+				"align",
+				"align-self"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"pa",
+				"padding"
+			],
+			[
+				"lowe",
+				"lower-hexadecimal"
+			],
+			[
+				"uppe",
+				"upper-roman"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"clo",
+				"color"
+			],
+			[
+				"text-",
+				"text-indent"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/planet.hpp",
+			"settings":
+			{
+				"buffer_size": 393,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_solar.cpp",
+			"settings":
+			{
+				"buffer_size": 15428,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.vert",
+			"settings":
+			{
+				"buffer_size": 714,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.frag",
+			"settings":
+			{
+				"buffer_size": 1964,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 117.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/resources",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders"
+	],
+	"file_history":
+	[
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/utils/OpenGLFramework.sublime-workspace",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/utils/OpenGLFramework.sublime-project",
+		"/home/vanya/workspace/Classifications/src/new_tfidf.py",
+		"/home/vanya/workspace/Classifications/src/test.txt",
+		"/home/vanya/workspace/Classifications/src/tfidf.py",
+		"/home/vanya/workspace/Classifications/src/tabSeparatedArguments_debatepedia.txt",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/structs.hpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.frag",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.vert",
+		"/home/vanya/workspace/wstud-evidence-detection-ss16/data/lexicons/comparison/frequencies_idebate.txt",
+		"/home/vanya/workspace/wstud-evidence-detection-ss16/data/lexicons/comparison/frequencies_debatewise.txt",
+		"/home/vanya/workspace/wstud-evidence-detection-ss16/data/lexicons/comparison/frequencies_debatepedia.txt",
+		"/home/vanya/workspace/wstud-evidence-detection-ss16/data/lexicons/comparison/frequencies_brown.txt",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/moon.hpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/planet.hpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/source/launcher.cpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_solar.cpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/source/application.cpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_indexed.cpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_vao.cpp",
+		"/home/vanya/Programmiersprachen/test.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 5/programmiersprachen-raytracer/framework/box.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 5/programmiersprachen-raytracer/framework/shape.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 5/programmiersprachen-raytracer/framework/sphere.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/tests.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/mat2.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/testlist.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/aufgabe7.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/aufgabe5.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/a1.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/aufgabe2bis4.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 4/programmiersprachen_aufgabenblatt_4/source/list.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/vec2.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/aufgabe10.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/circle.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/programmiersprachen_aufgabenblatt3/source/circle.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 3/test.cpp",
+		"/home/vanya/Programmiersprachen/try.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/window.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/window.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/example.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/rectangle.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/rectangle.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/circle.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/circle.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/vec2.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/color.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/color.hpp",
+		"/home/vanya/Programmiersprachen/Exercise 2/programmiersprachen-aufgabenblatt-2/source/mat2.hpp",
+		"/home/vanya/Programmiersprachen/programmiersprachen2016/source/tests.cpp",
+		"/home/vanya/Programmiersprachen/programmiersprachen2016/source/miletokm.cpp",
+		"/home/vanya/Programmiersprachen/Exercise 1/try.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/maintree.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/node.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/node.hpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/mytree.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/mytree.hpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/tree.hpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/tree.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/mainTree.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a21.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a10.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a9.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a8.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/main.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/mymath.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/mymath.hpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a4.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a3.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a2.cpp",
+		"/home/vanya/Programmiersprachen/Crashcourse/a1.cpp",
+		"/home/vanya/Programmiersprachen/helloworld.cpp",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 16/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 16/css/style.css",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 16/js/events.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 16/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 16/css/style.css",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 16/js/events.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 15/css/style.css",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 15/js/dom.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 15 DOM3/js/dom3.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 15 DOM3/css/style.css",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 15 DOM3/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 13 + 14/css/style.css",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 13 + 14/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 13 + 14/js/dom.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 14 DOM2/css/style.css",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 14 DOM2/js/dom2.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 14 DOM2/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 13 DOM/js/dom1.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 13 DOM/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 13 DOM/js/homework.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 12/js/functions.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 8/js/ternary.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 12/js/functions.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 11/js/forin.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 11/js/forin.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 11/js/dowhile.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 10/js/dowhile.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 10/js/forloops.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 10/js/dowhile.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 9/js/forloops.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 9/js/forloop.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 8/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 8/js/ternary.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 7/js/switch.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 7/js/ifelse.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 7 /index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 7 /js/switch.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 6/js/ifelse.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 6/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 6/js/ifelse.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 6/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 5/js/object.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 5/js/objects.js",
+		"/home/vanya/Schreibtisch/Webtech2/Blatt6/index.html",
+		"/home/vanya/Schreibtisch/Webtech2/Blatt6/stack.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 5/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 6/js/objects.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 1 + 2/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 4/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 4/js/arrayMethods.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/js/script.js",
+		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 3/index.html",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 3/js/array.js",
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 2/index.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"DiffuseColor",
+			"renderPl",
+			"initi",
+			"Self",
+			"FREQ",
+			"CARD",
+			"ORD",
+			"NUMB",
+			"EVAL",
+			"Comp",
+			"Finish",
+			"Decr",
+			"Incr",
+			"Vary",
+			"Fail",
+			"Means",
+			"Say",
+			"Role",
+			"Acad",
+			"Undrst",
+			"Subm",
+			"Affil",
+			"neg",
+			"FOOD",
+			"OTHERS",
+			"Eval",
+			"double",
+			"float",
+			"res",
+			"article",
+			"100px",
+			";\n",
+			"<span class=\"bold\">",
+			"#navigation",
+			"#head",
+			";\n",
+			"time",
+			".article",
+			"p>",
+			"section",
+			"p>",
+			"p"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/planet.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_solar.cpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15428,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2364,
+								2364
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 153.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.vert",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								606,
+								606
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.frag",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1964,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								249,
+								249
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "OpenGLFramework.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Schreibtisch/CSS/Lesson 2 - background&colors/Homework/css/style.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 221.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
