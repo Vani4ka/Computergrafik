@@ -30,6 +30,7 @@ public:
 protected:
     void initializeShaderPrograms();
     void initializeGeometry();
+    void initializeTextures();
     void updateView();
 
     //render a specific planet (or moon)

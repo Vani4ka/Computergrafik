@@ -18,37 +18,16 @@ using namespace gl;
 #include <glm/gtc/type_ptr.hpp>
 
 #include <iostream>
+#include <texture_loader.hpp>
 
 ApplicationSolar::ApplicationSolar(std::string const& resource_path)
         :Application{resource_path}
         ,planet_object{}
 {
-    // //Sun
-    // planets.push_back(Planet{695700.0f, 0.0f, 0.0f});
-
-    // //Mercury
-    // planets.push_back(Planet{2440.0f, 1.0f, 57910000.0f});
-    // //Venus
-    // planets.push_back(Planet{6052.0f, 1.0f, 108200000.0f});
-    // //Earth
-    // planets.push_back(Planet{6371.0f, 1.0f, 149600000.0f});
-    // //Moon
-    // planets.push_back(Planet{1737.0f, 1.0f, 150000000.0f});
-    // //Mars
-    // planets.push_back(Planet{3390.0f, 1.0f, 227900000.0f});
-    // //Jupiter
-    // planets.push_back(Planet{69911.0f, 1.0f, 778500000.0f});
-    // //Saturn
-    // planets.push_back(Planet{58232.0f, 1.0f, 1433449370.0f});
-    // //Uranus
-    // planets.push_back(Planet{25362.0f, 1.0f, 2870972200.0f});
-    // //Neptune
-    // planets.push_back(Planet{24622.0f, 1.0f, 4503443661.0f});
-
     //we mentioned that the realistic solar system is not very.. pretty
     //so our solar system is not realistic scaled, but still fancy
 
-    //Sun
+    /*//Sun
     planets.push_back(Planet{0.6f, 1, 0, {1.0f, 0.647f,0.0f}});
     //Mercury
     planets.push_back(Planet{0.08f, 0.47f, 0.8f, {0.592f,0.509f,0.662f}});
@@ -68,7 +47,66 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Uranus
     planets.push_back(Planet{0.17f, 0.07f, 3.9f, {0.1f,0.56f,0.9f}});
     //Neptune
-    planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});
+    planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});*/
+
+    std::cout<<"Loading "<<m_resource_path+"textures/sunmap.jpg\n";
+    //Sun
+    planets.push_back(
+            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.jpg\n";
+    //Mercury
+    planets.push_back(
+            Planet{0.08f, 0.47f, 0.8f, texture_loader::file(m_resource_path+"textures/mercurymap.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/venusmap.jpg\n";
+    //Venus
+    planets.push_back(
+            Planet{0.13f, 0.35f, 1.1f, texture_loader::file(m_resource_path+"textures/venusmap.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/earthmap1k.jpg\n";
+    //Earth
+    Planet earth = Planet{0.14f, 0.3f, 1.5f, texture_loader::file(m_resource_path+"textures/earthmap1k.jpg")};
+
+    std::cout<<"Loading "<<m_resource_path+"textures/moonmap1k.jpg\n";
+    //Moon
+    earth.moons.push_back(
+            Planet{0.04f, 1.0f, 0.2f, texture_loader::file(m_resource_path+"textures/moonmap1k.jpg")}
+    );
+    planets.push_back(earth);
+
+    std::cout<<"Loading "<<m_resource_path+"textures/marsmap1k.jpg\n";
+    //Mars
+    planets.push_back(
+            Planet{0.11f, 0.24f, 1.95f, texture_loader::file(m_resource_path+"textures/marsmap1k.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/jupitermap.jpg\n";
+    //Jupiter
+    planets.push_back(
+            Planet{0.32f, 0.13f, 2.65f, texture_loader::file(m_resource_path+"textures/jupitermap.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/saturnmap.jpg\n";
+    //Saturn
+    planets.push_back(
+            Planet{0.25f, 0.1f, 3.35f, texture_loader::file(m_resource_path+"textures/saturnmap.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/uranusmap.jpg\n";
+    //Uranus
+    planets.push_back(
+            Planet{0.17f, 0.07f, 3.9f, texture_loader::file(m_resource_path+"textures/uranusmap.jpg")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/neptunemap.jpg\n";
+    //Neptune
+    planets.push_back(
+            Planet{0.17f, 0.055f, 4.3f, texture_loader::file(m_resource_path+"textures/neptunemap.jpg")}
+    );
 
     for(int i=0; i < 1000; i++){
         //coordinates X, Y, Z
@@ -289,6 +327,10 @@ void ApplicationSolar::mouseCallback(double xpos, double ypos){
 
     //m_view_transform = glm::translate(m_view_transform, view_current_translation);
     updateView();
+}
+
+void ApplicationSolar::initializeTextures() {
+
 }
 
 // load shader programs
