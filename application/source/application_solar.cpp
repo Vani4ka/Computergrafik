@@ -143,6 +143,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     shadingMode = 1;
 
     initializeGeometry();
+    initializeTextures();
     initializeShaderPrograms();
 }
 
@@ -348,6 +349,7 @@ GLenum ApplicationSolar::getTextureUnit(int i) const {
 
 void ApplicationSolar::initializeTextures() {
     for(int i=0; i < planets.size(); i++){
+        Planet currentPlanet = planets[i];
         texture_object tex_object;
 
         glActiveTexture(getTextureUnit(i));
@@ -358,8 +360,19 @@ void ApplicationSolar::initializeTextures() {
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
         //glTexImage2D(GL_TEXTURE_2D, 0, planets[i].texture.channels, planets[i].texture.width, planets[i].texture.height, 0, GL_RGBA, )
+        glTexImage2D(GL_TEXTURE_2D,
+                     0,
+                     GL_RGB,
+                     currentPlanet.texture.width,
+                     currentPlanet.texture.height,
+                     0,
+                     currentPlanet.texture.channels,
+                     currentPlanet.texture.channel_type,
+                     currentPlanet.texture.ptr());
 
         tex_object.target = getTextureUnit(i);
+
+        texture_objects.push_back(tex_object);
     }
 }
 
