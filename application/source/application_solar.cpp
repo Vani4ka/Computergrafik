@@ -150,15 +150,15 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 int ApplicationSolar::getIndexOf(Planet const &planet) const {
     int offset = 0;
     for(int i=0; i< planets.size(); i++){
+        if(&planets[i] == &planet){
+            return i + offset;
+        }
+
         for(int j = 0; j < planets[i].moons.size(); j++){
             if(&planets[i].moons[j] == &planet){
                 return i + j + 1;
             }
             offset++;
-        }
-
-        if(&planets[i] == &planet){
-            return i + offset;
         }
     }
 
