@@ -31,6 +31,7 @@ protected:
     void initializeShaderPrograms();
     void initializeGeometry();
     void initializeTextures();
+    void initializeTexture(Planet const& planet, int index);
     void updateView();
 
     int getIndexOf(Planet const& planet) const;

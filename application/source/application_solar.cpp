@@ -148,9 +148,17 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 }
 
 int ApplicationSolar::getIndexOf(Planet const &planet) const {
+    int offset = 0;
     for(int i=0; i< planets.size(); i++){
+        for(int j = 0; j < planets[i].moons.size(); j++){
+            if(&planets[i].moons[j] == &planet){
+                return i + j + 1;
+            }
+            offset++;
+        }
+
         if(&planets[i] == &planet){
-            return i;
+            return i + offset;
         }
     }
 
@@ -165,7 +173,7 @@ void ApplicationSolar::render() const {
         renderPlanet(planet, transBase);
 
         for(auto const& moon: planet.moons){
-            //renderPlanet(moon, transBase);
+            renderPlanet(moon, transBase);
         }
 
         renderOrbit(planet.orig_distance);
@@ -366,32 +374,41 @@ GLenum ApplicationSolar::getTextureUnit(int i) const {
 
 
 void ApplicationSolar::initializeTextures() {
+    int offset = 0;
     for(int i=0; i < planets.size(); i++){
-        Planet currentPlanet = planets[i];
-        texture_object tex_object;
+        initializeTexture(planets[i], i + offset);
 
-        glActiveTexture(getTextureUnit(i));
-        glGenTextures(1, &tex_object.handle);
-        glBindTexture(GL_TEXTURE_2D, tex_object.handle);
-
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-        //glTexImage2D(GL_TEXTURE_2D, 0, planets[i].texture.channels, planets[i].texture.width, planets[i].texture.height, 0, GL_RGBA, )
-        glTexImage2D(GL_TEXTURE_2D,
-                     0,
-                     currentPlanet.texture.channels,
-                     (GLsizei) currentPlanet.texture.width,
-                     (GLsizei) currentPlanet.texture.height,
-                     0,
-                     currentPlanet.texture.channels,
-                     currentPlanet.texture.channel_type,
-                     currentPlanet.texture.ptr());
-
-        tex_object.target = getTextureUnit(i);
-
-        texture_objects.push_back(tex_object);
+        for(int j=0; j < planets[i].moons.size(); j++){
+            offset++;
+            initializeTexture(planets[i].moons[j], i + j + 1);
+        }
     }
+}
+
+void ApplicationSolar::initializeTexture(Planet const& planet, int index) {
+    texture_object tex_object;
+
+    glActiveTexture(getTextureUnit(index));
+    glGenTextures(1, &tex_object.handle);
+    glBindTexture(GL_TEXTURE_2D, tex_object.handle);
+
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    //glTexImage2D(GL_TEXTURE_2D, 0, planets[i].texture.channels, planets[i].texture.width, planets[i].texture.height, 0, GL_RGBA, )
+    glTexImage2D(GL_TEXTURE_2D,
+                 0,
+                 planet.texture.channels,
+                 (GLsizei) planet.texture.width,
+                 (GLsizei) planet.texture.height,
+                 0,
+                 planet.texture.channels,
+                 planet.texture.channel_type,
+                 planet.texture.ptr());
+
+    tex_object.target = getTextureUnit(index);
+
+    texture_objects.push_back(tex_object);
 }
 
 // load shader programs
