@@ -33,6 +33,8 @@ protected:
     void initializeTextures();
     void updateView();
 
+    int getIndexOf(Planet const& planet) const;
+
     //render a specific planet (or moon)
     void renderPlanet(Planet const& planet, glm::fmat4& transBase) const;
     //draws the planet orbits

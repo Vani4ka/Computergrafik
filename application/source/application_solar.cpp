@@ -52,7 +52,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap.jpg\n";
     //Sun
     planets.push_back(
-            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap.jpg")}
+            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/test-sun.png")}
     );
 
     std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.jpg\n";
@@ -69,7 +69,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 
     std::cout<<"Loading "<<m_resource_path+"textures/earthmap1k.jpg\n";
     //Earth
-    Planet earth = Planet{0.14f, 0.3f, 1.5f, texture_loader::file(m_resource_path+"textures/earthmap1k.jpg")};
+    Planet earth = Planet{0.14f, 0.3f, 1.5f, texture_loader::file(m_resource_path+"textures/test-earth.png")};
 
     std::cout<<"Loading "<<m_resource_path+"textures/moonmap1k.jpg\n";
     //Moon
@@ -147,6 +147,17 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     initializeShaderPrograms();
 }
 
+int ApplicationSolar::getIndexOf(Planet const &planet) const {
+    for(int i=0; i< planets.size(); i++){
+        if(&planets[i] == &planet){
+            return i;
+        }
+    }
+
+    std::cout<<"ERROR: Planet not found!\n";
+    return -1;
+}
+
 void ApplicationSolar::render() const {
     for(auto const& planet: planets) {
         //transform matrix of planet to make moons rotate around planets
@@ -154,7 +165,7 @@ void ApplicationSolar::render() const {
         renderPlanet(planet, transBase);
 
         for(auto const& moon: planet.moons){
-            renderPlanet(moon, transBase);
+            //renderPlanet(moon, transBase);
         }
 
         renderOrbit(planet.orig_distance);
@@ -177,13 +188,20 @@ void ApplicationSolar::renderOrbit(float radius) const {
 }
 
 void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase) const {
+    int index = getIndexOf(planet);
+
+    glActiveTexture(texture_objects[index].target);
+    glBindTexture(GL_TEXTURE_2D, texture_objects[index].handle);
+
     // bind shader to upload uniforms
     glUseProgram(m_shaders.at("planet").handle);
 
     uploadPlanetTransforms(planet, transBase);
 
+    glUniform1i(m_shaders.at("planet").u_locs.at("ColorTex"), index);
+
     //Assign. 3 color upload
-    glUniform3fv(m_shaders.at("planet").u_locs.at("DiffuseColor"), 1, glm::value_ptr(planet.color));
+    //glUniform3fv(m_shaders.at("planet").u_locs.at("DiffuseColor"), 1, glm::value_ptr(planet.color));
 
     //upload shading mode
     glUniform1i(m_shaders.at("planet").u_locs.at("ShadingMode"), shadingMode);
@@ -362,9 +380,9 @@ void ApplicationSolar::initializeTextures() {
         //glTexImage2D(GL_TEXTURE_2D, 0, planets[i].texture.channels, planets[i].texture.width, planets[i].texture.height, 0, GL_RGBA, )
         glTexImage2D(GL_TEXTURE_2D,
                      0,
-                     GL_RGB,
-                     currentPlanet.texture.width,
-                     currentPlanet.texture.height,
+                     currentPlanet.texture.channels,
+                     (GLsizei) currentPlanet.texture.width,
+                     (GLsizei) currentPlanet.texture.height,
                      0,
                      currentPlanet.texture.channels,
                      currentPlanet.texture.channel_type,
@@ -390,6 +408,7 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("planet").u_locs["DiffuseColor"] = -1;
     m_shaders.at("planet").u_locs["LightPosition"] = -1;
     m_shaders.at("planet").u_locs["ShadingMode"] = -1;
+    m_shaders.at("planet").u_locs["ColorTex"] = -1;
 
     m_shaders.emplace("star", shader_program{m_resource_path + "shaders/stars.vert",
                                              m_resource_path + "shaders/stars.frag"});
@@ -407,7 +426,7 @@ void ApplicationSolar::initializeShaderPrograms() {
 
 // load models
 void ApplicationSolar::initializeGeometry() {
-    model planet_model = model_loader::obj(m_resource_path + "models/sphere.obj", model::NORMAL);
+    model planet_model = model_loader::obj(m_resource_path + "models/sphere.obj", model::NORMAL | model::TEXCOORD);
 
     // generate vertex array object
     glGenVertexArrays(1, &planet_object.vertex_AO);
@@ -430,6 +449,10 @@ void ApplicationSolar::initializeGeometry() {
     // second attribute is 3 floats with no offset & stride
     glVertexAttribPointer(1, model::NORMAL.components, model::NORMAL.type, GL_FALSE, planet_model.vertex_bytes, planet_model.offsets[model::NORMAL]);
 
+    glEnableVertexAttribArray(2);
+    glVertexAttribPointer(2, model::TEXCOORD.components, model::TEXCOORD.type, GL_FALSE, planet_model.vertex_bytes, planet_model.offsets[model::TEXCOORD]);
+
+
     // generate generic buffer
     glGenBuffers(1, &planet_object.element_BO);
     // bind this as an vertex array buffer containing all attributes
@@ -441,6 +464,7 @@ void ApplicationSolar::initializeGeometry() {
     planet_object.draw_mode = GL_TRIANGLES;
     // transfer number of indices to model object
     planet_object.num_elements = GLsizei(planet_model.indices.size());
+
 
 
     /** ASSIGNMENT 2 **/

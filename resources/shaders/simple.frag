@@ -2,14 +2,18 @@
 
 in vec3 pass_VertPos;
 in vec3 pass_Normal;
+in vec2 pass_TexCoord;
 
 //diffuse color of planets
-uniform vec3 DiffuseColor;
+//uniform vec3 DiffuseColor;
 uniform vec3 LightPosition;
 
 uniform int ShadingMode;
 
+uniform sampler2D ColorTex;
+
 vec3 ambientColor;
+vec3 diffuseColor;
 vec3 specularColor = vec3(1.0f, 1.0f, 1.0f);
 vec3 borderColor = vec3(0.8, 0.6, 0.0);
 float b = 15.0f;
@@ -21,7 +25,8 @@ float specularMaterial = 1.0f;
 out vec4 out_Color;
 
 void main() {
-    ambientColor = DiffuseColor;
+    diffuseColor = texture(ColorTex, pass_TexCoord).xyz;
+    ambientColor = diffuseColor;
     vec3 lightDir = LightPosition - pass_VertPos;
     vec3 viewDir = -pass_VertPos;
     vec3 halfDir =  normalize(lightDir) + normalize(viewDir);
@@ -30,7 +35,7 @@ void main() {
     float specularAngle = max(dot(normalize(pass_Normal), normalize(halfDir)), 0.0f);
 
     vec3 illumination = ambientMaterial * ambientColor
-        + diffuseMaterial * DiffuseColor * diffuseAngle
+        + diffuseMaterial * diffuseColor * diffuseAngle
         + specularMaterial * specularColor * pow(specularAngle, b);
 
     if(ShadingMode == 1){
@@ -40,7 +45,7 @@ void main() {
     else if(ShadingMode == 2){
         if(dot(normalize(pass_Normal), normalize(viewDir)) > 0.15){
             //no specular light for cel shading for more cartoon-factor
-            vec3 celColor = ambientMaterial * ambientColor + diffuseMaterial * DiffuseColor * diffuseAngle;
+            vec3 celColor = ambientMaterial * ambientColor + diffuseMaterial * diffuseColor * diffuseAngle;
             if(diffuseAngle > 0.96){
                 out_Color = vec4(celColor, 1.0);
             }
@@ -59,7 +64,7 @@ void main() {
         }
         //border condition
         else{
-            out_Color = vec4(DiffuseColor,1.0);
+            out_Color = vec4(diffuseColor,1.0);
         }
     }
 }
