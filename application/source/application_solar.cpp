@@ -49,63 +49,63 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Neptune
     planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});*/
 
-    std::cout<<"Loading "<<m_resource_path+"textures/sunmap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/sunmap.png\n";
     //Sun
     planets.push_back(
-            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/test-sun.png")}
+            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.png\n";
     //Mercury
     planets.push_back(
-            Planet{0.08f, 0.47f, 0.8f, texture_loader::file(m_resource_path+"textures/mercurymap.jpg")}
+            Planet{0.08f, 0.47f, 0.8f, texture_loader::file(m_resource_path+"textures/mercurymap.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/venusmap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/venusmap.png\n";
     //Venus
     planets.push_back(
-            Planet{0.13f, 0.35f, 1.1f, texture_loader::file(m_resource_path+"textures/venusmap.jpg")}
+            Planet{0.13f, 0.35f, 1.1f, texture_loader::file(m_resource_path+"textures/venusmap.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/earthmap1k.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/earthmap1k.png\n";
     //Earth
-    Planet earth = Planet{0.14f, 0.3f, 1.5f, texture_loader::file(m_resource_path+"textures/test-earth.png")};
+    Planet earth = Planet{0.14f, 0.3f, 1.5f, texture_loader::file(m_resource_path+"textures/earthmap1k.png")};
 
-    std::cout<<"Loading "<<m_resource_path+"textures/moonmap1k.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/moonmap1k.png\n";
     //Moon
     earth.moons.push_back(
-            Planet{0.04f, 1.0f, 0.2f, texture_loader::file(m_resource_path+"textures/moonmap1k.jpg")}
+            Planet{0.04f, 1.0f, 0.2f, texture_loader::file(m_resource_path+"textures/moonmap1k.png")}
     );
     planets.push_back(earth);
 
-    std::cout<<"Loading "<<m_resource_path+"textures/marsmap1k.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/marsmap1k.png\n";
     //Mars
     planets.push_back(
-            Planet{0.11f, 0.24f, 1.95f, texture_loader::file(m_resource_path+"textures/marsmap1k.jpg")}
+            Planet{0.11f, 0.24f, 1.95f, texture_loader::file(m_resource_path+"textures/marsmap1k.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/jupitermap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/jupitermap.png\n";
     //Jupiter
     planets.push_back(
-            Planet{0.32f, 0.13f, 2.65f, texture_loader::file(m_resource_path+"textures/jupitermap.jpg")}
+            Planet{0.32f, 0.13f, 2.65f, texture_loader::file(m_resource_path+"textures/jupitermap.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/saturnmap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/saturnmap.png\n";
     //Saturn
     planets.push_back(
-            Planet{0.25f, 0.1f, 3.35f, texture_loader::file(m_resource_path+"textures/saturnmap.jpg")}
+            Planet{0.25f, 0.1f, 3.35f, texture_loader::file(m_resource_path+"textures/saturnmap.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/uranusmap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/uranusmap.png\n";
     //Uranus
     planets.push_back(
-            Planet{0.17f, 0.07f, 3.9f, texture_loader::file(m_resource_path+"textures/uranusmap.jpg")}
+            Planet{0.17f, 0.07f, 3.9f, texture_loader::file(m_resource_path+"textures/uranusmap.png")}
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/neptunemap.jpg\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/neptunemap.png\n";
     //Neptune
     planets.push_back(
-            Planet{0.17f, 0.055f, 4.3f, texture_loader::file(m_resource_path+"textures/neptunemap.jpg")}
+            Planet{0.17f, 0.055f, 4.3f, texture_loader::file(m_resource_path+"textures/neptunemap.png")}
     );
 
     for(int i=0; i < 1000; i++){

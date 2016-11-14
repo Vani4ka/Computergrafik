@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"GL",
+				"GL_TEXTURE0"
+			],
+			[
 				"u",
 				"u_locs"
 			],
@@ -435,7 +439,7 @@
 			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/planet.hpp",
 			"settings":
 			{
-				"buffer_size": 393,
+				"buffer_size": 627,
 				"line_ending": "Unix"
 			}
 		},
@@ -443,7 +447,23 @@
 			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_solar.cpp",
 			"settings":
 			{
-				"buffer_size": 15428,
+				"buffer_size": 17384,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/structs.hpp",
+			"settings":
+			{
+				"buffer_size": 1045,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
+			"settings":
+			{
+				"buffer_size": 1837,
 				"line_ending": "Unix"
 			}
 		},
@@ -509,11 +529,16 @@
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/source",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/resources",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders"
 	],
 	"file_history":
 	[
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/texture_loader.hpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/source/texture_loader.cpp",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/utils/OpenGLFramework.sublime-workspace",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/utils/OpenGLFramework.sublime-project",
@@ -639,9 +664,7 @@
 		"/home/vanya/Schreibtisch/JavaScript/Lesson 4/js/arrayMethods.js",
 		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/js/script.js",
 		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/index.html",
-		"/home/vanya/Schreibtisch/JavaScript/Lesson 3/index.html",
-		"/home/vanya/Schreibtisch/JavaScript/Lesson 3/js/array.js",
-		"/home/vanya/Schreibtisch/JavaScript/Lesson 2/index.html"
+		"/home/vanya/Schreibtisch/JavaScript/Lesson 3/index.html"
 	],
 	"find":
 	{
@@ -727,15 +750,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 393,
+						"buffer_size": 627,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								236,
-								236
+								320,
+								320
 							]
 						],
 						"settings":
@@ -755,15 +778,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15428,
+						"buffer_size": 17384,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2364,
-								2364
+								11890,
+								11890
 							]
 						],
 						"settings":
@@ -772,8 +795,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 153.0,
-						"translation.y": 663.0,
+						"translation.x": 0.0,
+						"translation.y": 5329.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -781,6 +804,66 @@
 				},
 				{
 					"buffer": 2,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/structs.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1045,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1837,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1452,
+								1416
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 357.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
 					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.vert",
 					"semi_transient": false,
 					"settings":
@@ -804,11 +887,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.frag",
 					"semi_transient": false,
 					"settings":
@@ -832,7 +915,7 @@
 						"translation.y": 51.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
