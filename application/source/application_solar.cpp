@@ -52,7 +52,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap.png\n";
     //Sun
     planets.push_back(
-            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap.png")}
+            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap1.png")}
     );
 
     std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.png\n";
