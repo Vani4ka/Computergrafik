@@ -49,10 +49,16 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Neptune
     planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});*/
 
-    std::cout<<"Loading "<<m_resource_path+"textures/sunmap.png\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/space.png\n";
+    //Space 
+    planets.push_back(
+            Planet{20.0f, 0.05, 0, texture_loader::file(m_resource_path+"textures/space.png")}
+    );
+
+    std::cout<<"Loading "<<m_resource_path+"textures/sunmap1.png\n";
     //Sun
     planets.push_back(
-            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap.png")}
+            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap1.png")}
     );
 
     std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.png\n";
@@ -369,6 +375,7 @@ GLenum ApplicationSolar::getTextureUnit(int i) const {
         case 8: return GL_TEXTURE8;
         case 9: return GL_TEXTURE9;
         case 10: return GL_TEXTURE10;
+        case 11: return GL_TEXTURE11;
     }
 }
 
