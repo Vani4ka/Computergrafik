@@ -55,6 +55,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
             Planet{30.0f, 0.001, 0, texture_loader::file(m_resource_path+"textures/stars.png")}
     );
 
+
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap1.png\n";
     //Sun
     planets.push_back(
