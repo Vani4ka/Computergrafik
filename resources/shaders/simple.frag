@@ -18,9 +18,9 @@ vec3 specularColor = vec3(1.0f, 1.0f, 1.0f);
 vec3 borderColor = vec3(0.8, 0.6, 0.0);
 float b = 15.0f;
 
-float diffuseMaterial = 1.0f;
-float ambientMaterial = 1.0f;
-float specularMaterial = 1.0f;
+float diffuseMaterial = 0.5f;
+float ambientMaterial = 0.9f;
+float specularMaterial = 0.5f;
 
 out vec4 out_Color;
 

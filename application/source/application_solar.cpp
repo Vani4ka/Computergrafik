@@ -49,10 +49,10 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Neptune
     planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});*/
 
-    std::cout<<"Loading "<<m_resource_path+"textures/space.png\n";
+    std::cout<<"Loading "<<m_resource_path+"textures/stars.png\n";
     //Space 
     planets.push_back(
-            Planet{20.0f, 0.05, 0, texture_loader::file(m_resource_path+"textures/space.png")}
+            Planet{30.0f, 0.001, 0, texture_loader::file(m_resource_path+"textures/stars.png")}
     );
 
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap1.png\n";
