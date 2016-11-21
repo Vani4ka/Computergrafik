@@ -21,13 +21,13 @@ vec3 borderColor = vec3(0.8, 0.6, 0.0);
 float b = 15.0f;
 
 float diffuseMaterial = 0.5f;
-float ambientMaterial = 0.9f;
+float ambientMaterial = 0.2f;
 float specularMaterial = 0.5f;
 
 out vec4 out_Color;
 
 void main() {
-    vec3 normal = normalize(texture(NormalMapTex, pass_TexCoord).rgb);
+    vec3 normal = normalize(texture(NormalMapTex, pass_TexCoord).rgb*2.0f -1.0f);
     diffuseColor = texture(ColorTex, pass_TexCoord).xyz;
     ambientColor = diffuseColor;
     vec3 lightDir = LightPosition - pass_VertPos;

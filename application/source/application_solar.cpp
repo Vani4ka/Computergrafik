@@ -70,7 +70,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    1,
                    0,
                    texture_loader::file(m_resource_path+"textures/sunmap1.png"),
-                   texture_loader::file(m_resource_path+"textures/earth-normal-map.png")
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png")
             }
     );
 
@@ -102,7 +102,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                            0.3f,
                            1.5f,
                            texture_loader::file(m_resource_path+"textures/earthmap1k.png"),
-                           texture_loader::file(m_resource_path+"textures/smoothMap.png")};
+                           texture_loader::file(m_resource_path+"textures/earth-normal-map.png")};
 
     //Moon
     earth.moons.push_back(

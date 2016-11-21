@@ -183,7 +183,8 @@ namespace model_loader {
 
         for (unsigned i = 0; i < tangents.size(); ++i) {
             // implement orthogonalization and normalization here
-            tangents[i] = glm::normalize((tangents[i] - normals[i]) * glm::dot(normals[i], tangents[i]));
+            tangents[i] = glm::normalize(tangents[i] - normals[i] * glm::dot(normals[i], tangents[i]));
+            std::cout<<"tangent: "<<tangents[i].x<<", "<<tangents[i].y<<", "<<tangents[i].z<<std::endl;
         }
 
         return tangents;
