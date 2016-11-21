@@ -16,11 +16,11 @@ out vec3 pass_Normal;
 out vec3 pass_VertPos;
 out vec2 pass_TexCoord;
 out vec3 pass_Tangent;
+out vec3 pass_Bitangent;
 
 void main(void)
 {
 	gl_Position = (ProjectionMatrix  * ViewMatrix * ModelMatrix) * vec4(in_Position, 1.0);
-	pass_Normal = (NormalMatrix * vec4(in_Normal, 0.0)).xyz;
 
 	vec4 homoVertPos = ViewMatrix * ModelMatrix * vec4(in_Position, 1.0);
 
@@ -29,5 +29,9 @@ void main(void)
 
 	pass_TexCoord = in_Texcoord;
 
-	pass_Tangent = (NormalMatrix * vec4(in_Tangent, 0.0)).xyz;
+	pass_Bitangent = cross(in_Normal, in_Tangent);
+
+    pass_Normal =  (NormalMatrix * vec4(in_Normal, 0.0)).xyz;
+	pass_Tangent = (/*NormalMatrix * */vec4(in_Tangent, 1.0)).xyz;
+	pass_Bitangent = (/*NormalMatrix * */vec4(pass_Bitangent, 1.0)).xyz;
 }
