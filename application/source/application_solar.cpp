@@ -52,67 +52,118 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     std::cout<<"Loading "<<m_resource_path+"textures/stars.png\n";
     //Space 
     planets.push_back(
-            Planet{30.0f, 0.001, 0, texture_loader::file(m_resource_path+"textures/stars.png")}
+            Planet{"skyball",
+                   30.0f,
+                   0.001,
+                   0,
+                   texture_loader::file(m_resource_path+"textures/stars.png"),
+                   texture_loader::file(m_resource_path+ "textures/smoothMap.png")
+            }
     );
 
 
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap1.png\n";
     //Sun
     planets.push_back(
-            Planet{0.6f, 1, 0, texture_loader::file(m_resource_path+"textures/sunmap1.png")}
+            Planet{"sun",
+                   0.6f,
+                   1,
+                   0,
+                   texture_loader::file(m_resource_path+"textures/sunmap1.png"),
+                   texture_loader::file(m_resource_path+"textures/earth-normal-map.png")
+            }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/mercurymap.png\n";
     //Mercury
     planets.push_back(
-            Planet{0.08f, 0.47f, 0.8f, texture_loader::file(m_resource_path+"textures/mercurymap.png")}
+            Planet{"mercury",
+                   0.08f,
+                   0.47f,
+                   0.8f,
+                   texture_loader::file(m_resource_path+"textures/mercurymap.png"),
+                   texture_loader::file(m_resource_path+ "textures/smoothMap.png")
+            }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/venusmap.png\n";
     //Venus
     planets.push_back(
-            Planet{0.13f, 0.35f, 1.1f, texture_loader::file(m_resource_path+"textures/venusmap.png")}
+            Planet{"venus",
+                   0.13f,
+                   0.35f,
+                   1.1f,
+                   texture_loader::file(m_resource_path+"textures/venusmap.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png")
+            }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/earthmap1k.png\n";
     //Earth
-    Planet earth = Planet{0.14f, 0.3f, 1.5f, texture_loader::file(m_resource_path+"textures/earthmap1k.png")};
+    Planet earth = Planet{ "earth",
+                           0.14f,
+                           0.3f,
+                           1.5f,
+                           texture_loader::file(m_resource_path+"textures/earthmap1k.png"),
+                           texture_loader::file(m_resource_path+"textures/smoothMap.png")};
 
-    std::cout<<"Loading "<<m_resource_path+"textures/moonmap1k.png\n";
     //Moon
     earth.moons.push_back(
-            Planet{0.04f, 1.0f, 0.2f, texture_loader::file(m_resource_path+"textures/moonmap1k.png")}
+            Planet{"earth-moon",
+                   0.04f,
+                   1.0f,
+                   0.2f,
+                   texture_loader::file(m_resource_path+"textures/moonmap1k.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
     );
+
     planets.push_back(earth);
 
-    std::cout<<"Loading "<<m_resource_path+"textures/marsmap1k.png\n";
     //Mars
     planets.push_back(
-            Planet{0.11f, 0.24f, 1.95f, texture_loader::file(m_resource_path+"textures/marsmap1k.png")}
+            Planet{"mars",
+                   0.11f,
+                   0.24f,
+                   1.95f,
+                   texture_loader::file(m_resource_path+"textures/marsmap1k.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/jupitermap.png\n";
     //Jupiter
     planets.push_back(
-            Planet{0.32f, 0.13f, 2.65f, texture_loader::file(m_resource_path+"textures/jupitermap.png")}
+            Planet{"jupiter",
+                   0.32f,
+                   0.13f,
+                   2.65f,
+                   texture_loader::file(m_resource_path+"textures/jupitermap.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/saturnmap.png\n";
     //Saturn
     planets.push_back(
-            Planet{0.25f, 0.1f, 3.35f, texture_loader::file(m_resource_path+"textures/saturnmap.png")}
+            Planet{"saturn",
+                   0.25f,
+                   0.1f,
+                   3.35f,
+                   texture_loader::file(m_resource_path+"textures/saturnmap.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/uranusmap.png\n";
     //Uranus
     planets.push_back(
-            Planet{0.17f, 0.07f, 3.9f, texture_loader::file(m_resource_path+"textures/uranusmap.png")}
+            Planet{"uranus",
+                   0.17f,
+                   0.07f,
+                   3.9f,
+                   texture_loader::file(m_resource_path+"textures/uranusmap.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
     );
 
-    std::cout<<"Loading "<<m_resource_path+"textures/neptunemap.png\n";
     //Neptune
     planets.push_back(
-            Planet{0.17f, 0.055f, 4.3f, texture_loader::file(m_resource_path+"textures/neptunemap.png")}
+            Planet{"neptune",
+                   0.17f,
+                   0.055f,
+                   4.3f,
+                   texture_loader::file(m_resource_path+"textures/neptunemap.png"),
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
     );
 
     for(int i=0; i < 1000; i++){
@@ -154,25 +205,6 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     initializeShaderPrograms();
 }
 
-int ApplicationSolar::getIndexOf(Planet const &planet) const {
-    int offset = 0;
-    for(int i=0; i< planets.size(); i++){
-        if(&planets[i] == &planet){
-            return i + offset;
-        }
-
-        for(int j = 0; j < planets[i].moons.size(); j++){
-            if(&planets[i].moons[j] == &planet){
-                return i + j + 1;
-            }
-            offset++;
-        }
-    }
-
-    std::cout<<"ERROR: Planet not found!\n";
-    return -1;
-}
-
 void ApplicationSolar::render() const {
     for(auto const& planet: planets) {
         //transform matrix of planet to make moons rotate around planets
@@ -203,7 +235,7 @@ void ApplicationSolar::renderOrbit(float radius) const {
 }
 
 void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase) const {
-    int index = getIndexOf(planet);
+    int index = tex_unit_indices.at(planet.name+"-tex");
 
     glActiveTexture(texture_objects[index].target);
     glBindTexture(GL_TEXTURE_2D, texture_objects[index].handle);
@@ -214,6 +246,9 @@ void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase)
     uploadPlanetTransforms(planet, transBase);
 
     glUniform1i(m_shaders.at("planet").u_locs.at("ColorTex"), index);
+
+    glUniform1i(m_shaders.at("planet").u_locs.at("NormalMapTex"),
+                tex_unit_indices.at(planet.name+"-normal"));
 
     //Assign. 3 color upload
     //glUniform3fv(m_shaders.at("planet").u_locs.at("DiffuseColor"), 1, glm::value_ptr(planet.color));
@@ -377,23 +412,46 @@ GLenum ApplicationSolar::getTextureUnit(int i) const {
         case 9: return GL_TEXTURE9;
         case 10: return GL_TEXTURE10;
         case 11: return GL_TEXTURE11;
+        case 12: return GL_TEXTURE12;
+        case 13: return GL_TEXTURE13;
+        case 14: return GL_TEXTURE14;
+        case 15: return GL_TEXTURE15;
+        case 16: return GL_TEXTURE16;
+        case 17: return GL_TEXTURE17;
+        case 18: return GL_TEXTURE18;
+        case 19: return GL_TEXTURE19;
+        case 20: return GL_TEXTURE20;
+        case 21: return GL_TEXTURE21;
+        case 22: return GL_TEXTURE22;
+        default: throw std::logic_error{"\nERROR: no left texture unit for index "+i};
     }
 }
 
 
 void ApplicationSolar::initializeTextures() {
-    int offset = 0;
-    for(int i=0; i < planets.size(); i++){
-        initializeTexture(planets[i], i + offset);
+    int tex_index = 0;
+    for(Planet const& planet: planets){
+        initializeTexture(planet.texture, tex_index);
+        tex_unit_indices.emplace(planet.name+"-tex", tex_index);
+        tex_index++;
 
-        for(int j=0; j < planets[i].moons.size(); j++){
-            offset++;
-            initializeTexture(planets[i].moons[j], i + j + 1);
+        initializeTexture(planet.normal_map, tex_index);
+        tex_unit_indices.emplace(planet.name+"-normal", tex_index);
+        tex_index++;
+
+        for(Planet const& moon: planet.moons){
+            initializeTexture(moon.texture, tex_index);
+            tex_unit_indices.emplace(moon.name+"-tex", tex_index);
+            tex_index++;
+
+            initializeTexture(moon.normal_map, tex_index);
+            tex_unit_indices.emplace(moon.name+"-normal", tex_index);
+            tex_index++;
         }
     }
 }
 
-void ApplicationSolar::initializeTexture(Planet const& planet, int index) {
+void ApplicationSolar::initializeTexture(pixel_data const& texture, int index) {
     texture_object tex_object;
 
     glActiveTexture(getTextureUnit(index));
@@ -406,13 +464,13 @@ void ApplicationSolar::initializeTexture(Planet const& planet, int index) {
     //glTexImage2D(GL_TEXTURE_2D, 0, planets[i].texture.channels, planets[i].texture.width, planets[i].texture.height, 0, GL_RGBA, )
     glTexImage2D(GL_TEXTURE_2D,
                  0,
-                 planet.texture.channels,
-                 (GLsizei) planet.texture.width,
-                 (GLsizei) planet.texture.height,
+                 texture.channels,
+                 (GLsizei) texture.width,
+                 (GLsizei) texture.height,
                  0,
-                 planet.texture.channels,
-                 planet.texture.channel_type,
-                 planet.texture.ptr());
+                 texture.channels,
+                 texture.channel_type,
+                 texture.ptr());
 
     tex_object.target = getTextureUnit(index);
 
@@ -430,10 +488,11 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("planet").u_locs["ModelMatrix"] = -1;
     m_shaders.at("planet").u_locs["ViewMatrix"] = -1;
     m_shaders.at("planet").u_locs["ProjectionMatrix"] = -1;
-    m_shaders.at("planet").u_locs["DiffuseColor"] = -1;
+    //m_shaders.at("planet").u_locs["DiffuseColor"] = -1;
     m_shaders.at("planet").u_locs["LightPosition"] = -1;
     m_shaders.at("planet").u_locs["ShadingMode"] = -1;
     m_shaders.at("planet").u_locs["ColorTex"] = -1;
+    m_shaders.at("planet").u_locs["NormalMapTex"] = -1;
 
     m_shaders.emplace("star", shader_program{m_resource_path + "shaders/stars.vert",
                                              m_resource_path + "shaders/stars.frag"});
@@ -451,7 +510,8 @@ void ApplicationSolar::initializeShaderPrograms() {
 
 // load models
 void ApplicationSolar::initializeGeometry() {
-    model planet_model = model_loader::obj(m_resource_path + "models/sphere.obj", model::NORMAL | model::TEXCOORD);
+    model planet_model = model_loader::obj(m_resource_path + "models/sphere.obj",
+                                           model::NORMAL | model::TEXCOORD | model::TANGENT);
 
     // generate vertex array object
     glGenVertexArrays(1, &planet_object.vertex_AO);
@@ -476,6 +536,9 @@ void ApplicationSolar::initializeGeometry() {
 
     glEnableVertexAttribArray(2);
     glVertexAttribPointer(2, model::TEXCOORD.components, model::TEXCOORD.type, GL_FALSE, planet_model.vertex_bytes, planet_model.offsets[model::TEXCOORD]);
+
+    glEnableVertexAttribArray(3);
+    glVertexAttribPointer(3, model::TANGENT.components, model::TANGENT.type, GL_FALSE, planet_model.vertex_bytes, planet_model.offsets[model::TANGENT]);
 
 
     // generate generic buffer

@@ -4,6 +4,7 @@
 layout(location = 0) in vec3 in_Position;
 layout(location = 1) in vec3 in_Normal;
 layout(location = 2) in vec2 in_Texcoord;
+layout(location = 3) in vec3 in_Tangent;
 
 //Matrix Uniforms as specified with glUniformMatrix4fv
 uniform mat4 ModelMatrix;
@@ -14,6 +15,7 @@ uniform mat4 NormalMatrix;
 out vec3 pass_Normal;
 out vec3 pass_VertPos;
 out vec2 pass_TexCoord;
+out vec3 pass_Tangent;
 
 void main(void)
 {
@@ -26,4 +28,6 @@ void main(void)
 	pass_VertPos = (homoVertPos / homoVertPos.w).xyz;
 
 	pass_TexCoord = in_Texcoord;
+
+	pass_Tangent = (NormalMatrix * vec4(in_Tangent, 0.0)).xyz;
 }

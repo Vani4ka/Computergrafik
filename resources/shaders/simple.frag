@@ -3,6 +3,7 @@
 in vec3 pass_VertPos;
 in vec3 pass_Normal;
 in vec2 pass_TexCoord;
+in vec3 pass_Tangent;
 
 //diffuse color of planets
 //uniform vec3 DiffuseColor;
@@ -11,6 +12,7 @@ uniform vec3 LightPosition;
 uniform int ShadingMode;
 
 uniform sampler2D ColorTex;
+uniform sampler2D NormalMapTex;
 
 vec3 ambientColor;
 vec3 diffuseColor;
@@ -25,14 +27,15 @@ float specularMaterial = 0.5f;
 out vec4 out_Color;
 
 void main() {
+    vec3 normal = normalize(texture(NormalMapTex, pass_TexCoord).rgb);
     diffuseColor = texture(ColorTex, pass_TexCoord).xyz;
     ambientColor = diffuseColor;
     vec3 lightDir = LightPosition - pass_VertPos;
     vec3 viewDir = -pass_VertPos;
     vec3 halfDir =  normalize(lightDir) + normalize(viewDir);
 
-    float diffuseAngle = max(dot(normalize(lightDir), normalize(pass_Normal)), 0.0f);
-    float specularAngle = max(dot(normalize(pass_Normal), normalize(halfDir)), 0.0f);
+    float diffuseAngle = max(dot(normalize(lightDir), normalize(normal)), 0.0f);
+    float specularAngle = max(dot(normalize(normal), normalize(halfDir)), 0.0f);
 
     vec3 illumination = ambientMaterial * ambientColor
         + diffuseMaterial * diffuseColor * diffuseAngle

@@ -8,21 +8,25 @@
 
 //Assign. 1
 struct Planet {
-	Planet(float scal, float speed, float dist, glm::fvec3 col):
+	Planet(std::string nam, float scal, float speed, float dist, glm::fvec3 col):
+		name{nam},
 		scale{scal},
 		rot_speed{speed},
 		orig_distance{dist},
 		color{col}
 	{}
 
-	Planet(float scal, float speed, float dist, pixel_data tex):
+	Planet(std::string nam, float scal, float speed, float dist, pixel_data tex, pixel_data map):
+		name{nam},
 		scale{scal},
 		rot_speed{speed},
 		orig_distance{dist},
-		texture{tex}
-	{
-		color = {1.0f, 1.0f, 1.0f};
-	}
+		texture{tex},
+		normal_map{map},
+		color{1.0f, 1.0f, 1.0f}
+	{}
+
+	std::string name;
 
 	float scale; //scaling factor
 	float rot_speed;
@@ -35,6 +39,7 @@ struct Planet {
 
 	//Assign. 4
 	pixel_data texture;
+	pixel_data normal_map;
 };
 
 #endif

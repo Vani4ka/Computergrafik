@@ -13,10 +13,12 @@
  
 #include <cstdint> 
 #include <cstring> 
-#include <stdexcept> 
+#include <stdexcept>
+#include <iostream>
 
 namespace texture_loader {
 pixel_data file(std::string const& file_name) {
+  std::cout<<"loading "<<file_name<<"\n";
   uint8_t* data_ptr;
   int width = 0;
   int height = 0;

@@ -31,7 +31,7 @@ protected:
     void initializeShaderPrograms();
     void initializeGeometry();
     void initializeTextures();
-    void initializeTexture(Planet const& planet, int index);
+    void initializeTexture(pixel_data const& texture, int index);
     void updateView();
 
     int getIndexOf(Planet const& planet) const;
@@ -60,10 +60,11 @@ protected:
 
     // Assign. 2
     std::vector<float> stars;
-
     std::vector<float> orbit_vertices;
 
     std::vector<texture_object> texture_objects;
+
+    std::map<std::string, int> tex_unit_indices;
 
     //shader choice
     int shadingMode;
