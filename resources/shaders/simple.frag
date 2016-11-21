@@ -4,6 +4,7 @@ in vec3 pass_VertPos;
 in vec3 pass_Normal;
 in vec2 pass_TexCoord;
 in vec3 pass_Tangent;
+in vec3 pass_Bitangent;
 
 //diffuse color of planets
 //uniform vec3 DiffuseColor;
@@ -21,15 +22,23 @@ vec3 borderColor = vec3(0.8, 0.6, 0.0);
 float b = 15.0f;
 
 float diffuseMaterial = 0.5f;
-float ambientMaterial = 0.9f;
+float ambientMaterial = 0.2f;
 float specularMaterial = 0.5f;
 
 out vec4 out_Color;
 
 void main() {
-    vec3 normal = normalize(texture(NormalMapTex, pass_TexCoord).rgb);
+    mat3 tangentMatrix = mat3(normalize(pass_Tangent),
+                              normalize(pass_Bitangent),
+                              normalize(pass_Normal));
+
+    vec3 normal = texture(NormalMapTex, pass_TexCoord).rgb;
+    normal = normalize(normal * 2.0 - 1.0);
+    normal = tangentMatrix * normal;
+
     diffuseColor = texture(ColorTex, pass_TexCoord).xyz;
     ambientColor = diffuseColor;
+
     vec3 lightDir = LightPosition - pass_VertPos;
     vec3 viewDir = -pass_VertPos;
     vec3 halfDir =  normalize(lightDir) + normalize(viewDir);

@@ -51,7 +51,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 
     std::cout<<"Loading "<<m_resource_path+"textures/stars.png\n";
     //Space 
-    planets.push_back(
+    /*planets.push_back(
             Planet{"skyball",
                    30.0f,
                    0.001,
@@ -59,7 +59,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    texture_loader::file(m_resource_path+"textures/stars.png"),
                    texture_loader::file(m_resource_path+ "textures/smoothMap.png")
             }
-    );
+    );*/
 
 
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap1.png\n";
@@ -70,7 +70,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    1,
                    0,
                    texture_loader::file(m_resource_path+"textures/sunmap1.png"),
-                   texture_loader::file(m_resource_path+"textures/earth-normal-map.png")
+                   texture_loader::file(m_resource_path+"textures/smoothMap.png")
             }
     );
 
@@ -102,7 +102,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                            0.3f,
                            1.5f,
                            texture_loader::file(m_resource_path+"textures/earthmap1k.png"),
-                           texture_loader::file(m_resource_path+"textures/smoothMap.png")};
+                           texture_loader::file(m_resource_path+"textures/earth-normal-map.png")};
 
     //Moon
     earth.moons.push_back(
@@ -539,7 +539,6 @@ void ApplicationSolar::initializeGeometry() {
 
     glEnableVertexAttribArray(3);
     glVertexAttribPointer(3, model::TANGENT.components, model::TANGENT.type, GL_FALSE, planet_model.vertex_bytes, planet_model.offsets[model::TANGENT]);
-
 
     // generate generic buffer
     glGenBuffers(1, &planet_object.element_BO);
