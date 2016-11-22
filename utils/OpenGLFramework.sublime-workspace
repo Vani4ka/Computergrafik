@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"GL_TE",
+				"GL_TEXTURE_2D"
+			],
+			[
+				"ren",
+				"renderSpace"
+			],
+			[
+				"spac",
+				"space_object"
+			],
+			[
+				"tex",
+				"texture_loader"
+			],
+			[
+				"space",
+				"space_radius"
+			],
+			[
+				"m_",
+				"m_resource_path"
+			],
+			[
+				"sha",
+				"shader_program"
+			],
+			[
 				"GL",
 				"GL_TEXTURE0"
 			],
@@ -21,10 +49,6 @@
 			],
 			[
 				"m",
-				"m_node"
-			],
-			[
-				"m_",
 				"m_node"
 			],
 			[
@@ -420,10 +444,6 @@
 				"list-style-type"
 			],
 			[
-				"tex",
-				"text-decoration"
-			],
-			[
 				"clo",
 				"color"
 			],
@@ -439,7 +459,7 @@
 			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/planet.hpp",
 			"settings":
 			{
-				"buffer_size": 627,
+				"buffer_size": 761,
 				"line_ending": "Unix"
 			}
 		},
@@ -447,7 +467,15 @@
 			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/source/application_solar.cpp",
 			"settings":
 			{
-				"buffer_size": 19838,
+				"buffer_size": 25236,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
+			"settings":
+			{
+				"buffer_size": 2179,
 				"line_ending": "Unix"
 			}
 		},
@@ -460,18 +488,10 @@
 			}
 		},
 		{
-			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
-			"settings":
-			{
-				"buffer_size": 1997,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.vert",
 			"settings":
 			{
-				"buffer_size": 811,
+				"buffer_size": 1088,
 				"line_ending": "Windows"
 			}
 		},
@@ -479,8 +499,26 @@
 			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/simple.frag",
 			"settings":
 			{
-				"buffer_size": 2094,
+				"buffer_size": 2473,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/space.vert",
+			"settings":
+			{
+				"buffer_size": 481,
+				"line_ending": "Unix",
+				"name": "#version 150"
+			}
+		},
+		{
+			"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/space.frag",
+			"settings":
+			{
+				"buffer_size": 168,
+				"line_ending": "Unix",
+				"name": "#version 150"
 			}
 		}
 	],
@@ -537,9 +575,11 @@
 	],
 	"file_history":
 	[
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/source/model_loader.cpp",
+		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/model_loader.hpp",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/texture_loader.hpp",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/source/texture_loader.cpp",
-		"/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/utils/OpenGLFramework.sublime-workspace",
 		"/home/vanya/WS16-17/Computergrafik/Computergrafik/utils/OpenGLFramework.sublime-project",
 		"/home/vanya/workspace/Classifications/src/new_tfidf.py",
@@ -662,9 +702,7 @@
 		"/home/vanya/Schreibtisch/JavaScript/Homework 1 + 2/index.html",
 		"/home/vanya/Schreibtisch/JavaScript/Lesson 4/index.html",
 		"/home/vanya/Schreibtisch/JavaScript/Lesson 4/js/arrayMethods.js",
-		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/js/script.js",
-		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/index.html",
-		"/home/vanya/Schreibtisch/JavaScript/Lesson 3/index.html"
+		"/home/vanya/Schreibtisch/JavaScript/Homework 3 + 4/js/script.js"
 	],
 	"find":
 	{
@@ -682,6 +720,9 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"getTextureUnit",
+			"sun",
+			"ModelMatrix",
 			"DiffuseColor",
 			"renderPl",
 			"initi",
@@ -750,7 +791,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 627,
+						"buffer_size": 761,
 						"regions":
 						{
 						},
@@ -769,7 +810,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
@@ -778,15 +819,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 19838,
+						"buffer_size": 25236,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1826,
-								1826
+								19419,
+								19419
 							]
 						],
 						"settings":
@@ -796,7 +837,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 714.0,
+						"translation.y": 8538.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -804,6 +845,36 @@
 				},
 				{
 					"buffer": 2,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1280,
+								1280
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 408.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/framework/include/structs.hpp",
 					"semi_transient": false,
 					"settings":
@@ -829,37 +900,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/application/include/application_solar.hpp",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1997,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								843,
-								843
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C++/C++.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 408.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
@@ -868,15 +909,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 811,
+						"buffer_size": 1088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								606,
-								606
+								1088,
+								1088
 							]
 						],
 						"settings":
@@ -896,15 +937,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2094,
+						"buffer_size": 2473,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								628,
-								628
+								966,
+								966
 							]
 						],
 						"settings":
@@ -912,10 +953,70 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 51.0,
+						"translation.y": 357.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/space.vert",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								447,
+								447
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#version 150",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/vanya/WS16-17/Computergrafik/Computergrafik/resources/shaders/space.frag",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								101,
+								101
+							]
+						],
+						"settings":
+						{
+							"auto_name": "#version 150",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1002,7 +1103,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 221.0,
+	"side_bar_width": 243.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

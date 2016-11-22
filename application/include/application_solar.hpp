@@ -43,17 +43,23 @@ protected:
     //render stars
     void renderStars() const;
 
+    void renderSpace() const;
+
     // calculates and uploads the model- and normal matrix for planet
     void uploadPlanetTransforms(Planet const& planet, glm::fmat4& transBase) const;
 
     // calculates and uploads the modelmatrix for the orbits
     void uploadOrbitTransforms(float radius) const;
 
+    void uploadSpaceTransforms() const;
+
     //
     GLenum getTextureUnit(int i) const;
 
     float view_horizontal_angle;
     float view_vertical_angle;
+
+    float space_radius;
 
     // Assign. 1
     std::vector<Planet> planets;
@@ -73,6 +79,7 @@ protected:
     model_object planet_object;
     model_object star_object;
     model_object orbit_object;
+    model_object space_object;
 };
 
 #endif

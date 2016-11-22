@@ -49,18 +49,9 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //Neptune
     planets.push_back(Planet{0.17f, 0.055f, 4.3f, {0.13f,0.33f,0.87f}});*/
 
-    std::cout<<"Loading "<<m_resource_path+"textures/stars.png\n";
-    //Space 
-    /*planets.push_back(
-            Planet{"skyball",
-                   30.0f,
-                   0.001,
-                   0,
-                   texture_loader::file(m_resource_path+"textures/stars.png"),
-                   texture_loader::file(m_resource_path+ "textures/smoothMap.png")
-            }
-    );*/
-
+    //Space
+    space_radius = 30.0f;
+    
 
     std::cout<<"Loading "<<m_resource_path+"textures/sunmap1.png\n";
     //Sun
@@ -206,6 +197,8 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 }
 
 void ApplicationSolar::render() const {
+    renderSpace();
+
     for(auto const& planet: planets) {
         //transform matrix of planet to make moons rotate around planets
         glm::fmat4 transBase{};
@@ -232,6 +225,20 @@ void ApplicationSolar::renderOrbit(float radius) const {
     uploadOrbitTransforms(radius);
     glBindVertexArray(orbit_object.vertex_AO);
     glDrawArrays(orbit_object.draw_mode, 0, orbit_object.num_elements);
+}
+
+void ApplicationSolar::renderSpace() const {
+    int index = tex_unit_indices.at("space");
+
+    glActiveTexture(texture_objects[index].target);
+    glBindTexture(GL_TEXTURE_2D, texture_objects[index].handle);
+
+    glUseProgram(m_shaders.at("space").handle);
+    glUniform1i(m_shaders.at("space").u_locs.at("ColorTex"), index);
+    uploadSpaceTransforms();
+    glBindVertexArray(space_object.vertex_AO);
+    // draw bound vertex array using bound shader
+    glDrawElements(space_object.draw_mode, space_object.num_elements, model::INDEX.type, NULL);
 }
 
 void ApplicationSolar::renderPlanet(Planet const& planet, glm::fmat4& transBase) const {
@@ -287,6 +294,13 @@ void ApplicationSolar::uploadOrbitTransforms(float radius) const {
                        1, GL_FALSE, glm::value_ptr(model_matrix));
 }
 
+void ApplicationSolar::uploadSpaceTransforms() const {
+    glm::fmat4 model_matrix = glm::scale(glm::fmat4{}, glm::fvec3{space_radius});
+
+    glUniformMatrix4fv(m_shaders.at("space").u_locs.at("ModelMatrix"),
+                       1, GL_FALSE, glm::value_ptr(model_matrix));
+}
+
 void ApplicationSolar::updateView() {
     // vertices are transformed in camera space, so camera transform must be inverted
     glm::fmat4 view_matrix = glm::inverse(m_view_transform);
@@ -309,6 +323,10 @@ void ApplicationSolar::updateView() {
     glUseProgram(m_shaders.at("orbit").handle);
     glUniformMatrix4fv(m_shaders.at("orbit").u_locs.at("ViewMatrix"),
                        1, GL_FALSE, glm::value_ptr(view_matrix));
+
+    glUseProgram(m_shaders.at("space").handle);
+    glUniformMatrix4fv(m_shaders.at("space").u_locs.at("ViewMatrix"),
+                       1, GL_FALSE, glm::value_ptr(view_matrix));
 }
 
 void ApplicationSolar::updateProjection() {
@@ -323,6 +341,10 @@ void ApplicationSolar::updateProjection() {
 
     glUseProgram(m_shaders.at("orbit").handle);
     glUniformMatrix4fv(m_shaders.at("orbit").u_locs.at("ProjectionMatrix"),
+                       1, GL_FALSE, glm::value_ptr(m_view_projection));
+
+    glUseProgram(m_shaders.at("space").handle);
+    glUniformMatrix4fv(m_shaders.at("space").u_locs.at("ProjectionMatrix"),
                        1, GL_FALSE, glm::value_ptr(m_view_projection));
 }
 
@@ -449,6 +471,9 @@ void ApplicationSolar::initializeTextures() {
             tex_index++;
         }
     }
+
+    initializeTexture(texture_loader::file(m_resource_path+"textures/stars.png"), tex_index);
+    tex_unit_indices.emplace("space", tex_index);
 }
 
 void ApplicationSolar::initializeTexture(pixel_data const& texture, int index) {
@@ -506,6 +531,14 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("orbit").u_locs["ProjectionMatrix"] = -1;
     m_shaders.at("orbit").u_locs["ViewMatrix"] = -1;
     m_shaders.at("orbit").u_locs["ModelMatrix"] = -1;
+
+    m_shaders.emplace("space", shader_program{m_resource_path + "shaders/space.vert",
+                                              m_resource_path + "shaders/space.frag"});
+
+    m_shaders.at("space").u_locs["ProjectionMatrix"] = -1;
+    m_shaders.at("space").u_locs["ViewMatrix"] = -1;
+    m_shaders.at("space").u_locs["ModelMatrix"] = -1;
+    m_shaders.at("space").u_locs["ColorTex"] = -1;
 }
 
 // load models
@@ -591,6 +624,40 @@ void ApplicationSolar::initializeGeometry() {
 
     orbit_object.draw_mode = GL_LINE_LOOP;
     orbit_object.num_elements = GLsizei(orbit_vertices.size() / 3);
+
+    //Assignment 4
+    model space_model = model_loader::obj(m_resource_path + "models/sphere.obj", model::TEXCOORD);
+
+    // generate vertex array object
+    glGenVertexArrays(1, &space_object.vertex_AO);
+    // bind the array for attaching buffers
+    glBindVertexArray(space_object.vertex_AO);
+
+    // generate generic buffer
+    glGenBuffers(1, &space_object.vertex_BO);
+    // bind this as an vertex array buffer containing all attributes
+    glBindBuffer(GL_ARRAY_BUFFER, space_object.vertex_BO);
+    // configure currently bound array buffer
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * space_model.data.size(), space_model.data.data(), GL_STATIC_DRAW);
+
+    // activate first attribute on gpu
+    glEnableVertexAttribArray(0);
+    // first attribute is 3 floats with no offset & stride
+    glVertexAttribPointer(0, model::POSITION.components, model::POSITION.type, GL_FALSE, space_model.vertex_bytes, space_model.offsets[model::POSITION]);
+    glEnableVertexAttribArray(1);
+    glVertexAttribPointer(1, model::TEXCOORD.components, model::TEXCOORD.type, GL_FALSE, space_model.vertex_bytes, space_model.offsets[model::TEXCOORD]);
+
+    // generate generic buffer
+    glGenBuffers(1, &space_object.element_BO);
+    // bind this as an vertex array buffer containing all attributes
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, space_object.element_BO);
+    // configure currently bound array buffer
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, model::INDEX.size * space_model.indices.size(), space_model.indices.data(), GL_STATIC_DRAW);
+
+    // store type of primitive to draw
+    space_object.draw_mode = GL_TRIANGLES;
+    // transfer number of indices to model object
+    space_object.num_elements = GLsizei(space_model.indices.size());
 }
 
 ApplicationSolar::~ApplicationSolar() {
