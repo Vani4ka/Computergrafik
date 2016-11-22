@@ -72,7 +72,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    0.47f,
                    0.8f,
                    texture_loader::file(m_resource_path+"textures/mercurymap.png"),
-                   texture_loader::file(m_resource_path+ "textures/smoothMap.png")
+                   texture_loader::file(m_resource_path+ "textures/mercury-normal-map.png")
             }
     );
 
@@ -83,7 +83,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    0.35f,
                    1.1f,
                    texture_loader::file(m_resource_path+"textures/venusmap.png"),
-                   texture_loader::file(m_resource_path+"textures/smoothMap.png")
+                   texture_loader::file(m_resource_path+"textures/venus-normal-map.png")
             }
     );
 
@@ -102,7 +102,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    1.0f,
                    0.2f,
                    texture_loader::file(m_resource_path+"textures/moonmap1k.png"),
-                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
+                   texture_loader::file(m_resource_path+"textures/moon-normal-map.png") }
     );
 
     planets.push_back(earth);
@@ -114,7 +114,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    0.24f,
                    1.95f,
                    texture_loader::file(m_resource_path+"textures/marsmap1k.png"),
-                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
+                   texture_loader::file(m_resource_path+"textures/mars-normal-map.png") }
     );
 
     //Jupiter
@@ -124,7 +124,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
                    0.13f,
                    2.65f,
                    texture_loader::file(m_resource_path+"textures/jupitermap.png"),
-                   texture_loader::file(m_resource_path+"textures/smoothMap.png") }
+                   texture_loader::file(m_resource_path+"textures/jupiter-normal-map.png") }
     );
 
     //Saturn

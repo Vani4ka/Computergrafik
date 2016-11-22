@@ -5,6 +5,7 @@
 #include <glm/geometric.hpp>
 
 #include <iostream>
+#include <tiny_obj_loader.h>
 
 namespace model_loader {
 
@@ -148,13 +149,16 @@ namespace model_loader {
         }
 
         // calculate tangent for triangles
+        tangents.reserve(model.positions.size());
         for (unsigned i = 0; i < model.indices.size() / 3; i++) {
-            // indices of vertices of this triangle, access any attribute of first vert with "attribute[indices[0]]"
+            // indices of vertices of this triangle, access any attribute of xth vert with "attribute[indices[x]]"
             unsigned indices[3] = {model.indices[i * 3],
                                    model.indices[i * 3 + 1],
                                    model.indices[i * 3 + 2]};
 
             // implement tangent calculation here
+            //calculate tangent for the triangle and add it to the accumulation tangents of the adjacent vertices
+            //see generate_normals() for similar workflow
 
             glm::fvec3 pos0 = positions[indices[0]];
             glm::fvec3 pos1 = positions[indices[1]];
@@ -178,12 +182,16 @@ namespace model_loader {
             tangent.y = div * (deltaUV2.y * deltaPos1.y - deltaUV1.y * deltaPos2.y);
             tangent.z = div * (deltaUV2.y * deltaPos1.z - deltaUV1.y * deltaPos2.z);
 
-            tangents.push_back(glm::normalize(tangent));
+            tangents[i] += tangent;
+            tangents[i+1] += tangent;
+            tangents[i+2] += tangent;
         }
 
+        //normalize and orthogonalize accumulated vertex tangents
         for (unsigned i = 0; i < tangents.size(); ++i) {
             // implement orthogonalization and normalization here
-            tangents[i] = glm::normalize(tangents[i] - normals[i] * glm::dot(normals[i], tangents[i]));
+            auto tangent = glm::normalize(tangents[i]);
+            tangents[i] = glm::normalize(tangent - normals[i] * glm::dot(normals[i], tangent));
         }
 
         return tangents;

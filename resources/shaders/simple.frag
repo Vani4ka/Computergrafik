@@ -22,7 +22,7 @@ vec3 borderColor = vec3(0.8, 0.6, 0.0);
 float b = 15.0f;
 
 float diffuseMaterial = 0.5f;
-float ambientMaterial = 0.2f;
+float ambientMaterial = 0.4f;
 float specularMaterial = 0.5f;
 
 out vec4 out_Color;
