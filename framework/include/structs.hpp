@@ -28,6 +28,13 @@ struct texture_object {
   GLenum target = GL_NONE;
 };
 
+struct framebuffer_object {
+    GLuint fbo = 0;
+    GLuint rbo = 0;
+
+    texture_object tex;
+};
+
 // shader handle and uniform storage
 struct shader_program {
   shader_program(std::string const& vertex, std::string const& fragment)

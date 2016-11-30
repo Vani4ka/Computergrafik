@@ -32,6 +32,7 @@ protected:
     void initializeGeometry();
     void initializeTextures();
     void initializeTexture(pixel_data const& texture, int index);
+    void initializeFramebuffer();
     void updateView();
 
     int getIndexOf(Planet const& planet) const;
@@ -44,6 +45,8 @@ protected:
     void renderStars() const;
 
     void renderSpace() const;
+
+    void renderScreen() const;
 
     // calculates and uploads the model- and normal matrix for planet
     void uploadPlanetTransforms(Planet const& planet, glm::fmat4& transBase) const;
@@ -67,6 +70,7 @@ protected:
     // Assign. 2
     std::vector<float> stars;
     std::vector<float> orbit_vertices;
+    std::vector<float> screen_quad_vertices;
 
     std::vector<texture_object> texture_objects;
 
@@ -80,6 +84,9 @@ protected:
     model_object star_object;
     model_object orbit_object;
     model_object space_object;
+    model_object screen_quad_object;
+
+    framebuffer_object framebuffer;
 };
 
 #endif
