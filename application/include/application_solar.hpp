@@ -79,6 +79,8 @@ protected:
     //shader choice
     int shadingMode;
 
+    bool toggleGrayscale;
+
     // cpu representation of model
     model_object planet_object;
     model_object star_object;

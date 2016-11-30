@@ -200,6 +200,8 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     //1 for blinn-phong
     shadingMode = 1;
 
+    toggleGrayscale = false;
+
     initializeGeometry();
     initializeTextures();
     initializeFramebuffer();
@@ -207,7 +209,9 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 }
 
 void ApplicationSolar::render() const {
+    //bind custom framebuffer
     glBindFramebuffer(GL_FRAMEBUFFER, framebuffer.fbo);
+    //clear buffer to prevent glitch
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     renderSpace();
@@ -226,7 +230,7 @@ void ApplicationSolar::render() const {
 
     renderStars();
 
-
+    //bind default framebuffer
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
     renderScreen();
 }
@@ -238,6 +242,7 @@ void ApplicationSolar::renderScreen() const{
     glActiveTexture(framebuffer.tex.target);
     glBindTexture(GL_TEXTURE_2D, framebuffer.tex.handle);
 
+    glUniform1b(m_shaders.at("screen").u_locs.at("ToggleGrayscale"), toggleGrayscale);
     glUniform1i(m_shaders.at("screen").u_locs.at("ColorTex"), index);
 
     glBindVertexArray(screen_quad_object.vertex_AO);
@@ -361,6 +366,7 @@ void ApplicationSolar::updateView() {
 }
 
 void ApplicationSolar::updateProjection() {
+    //get viewport settings
     GLint m_viewport[4];
     glGetIntegerv(GL_VIEWPORT, m_viewport);
 
@@ -467,6 +473,9 @@ void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) 
     else if (key == GLFW_KEY_2 && action == GLFW_PRESS){
         //use cel shader
         shadingMode = 2;
+    }
+    else if (key == GLFW_KEY_7 && action == GLFW_PRESS){
+        toggleGrayscale = !toggleGrayscale;
     }
 }
 
@@ -621,6 +630,7 @@ void ApplicationSolar::initializeShaderPrograms() {
                                                m_resource_path + "shaders/screen-quad.frag"});
 
     m_shaders.at("screen").u_locs["ColorTex"] = -1;
+    m_shaders.at("screen").u_locs["ToggleGrayscale"] = -1;
 }
 
 void ApplicationSolar::initializeFramebuffer() {
