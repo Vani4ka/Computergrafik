@@ -32,6 +32,6 @@ void main(void)
 	pass_Bitangent = cross(in_Normal, in_Tangent);
 
     pass_Normal =  (NormalMatrix * vec4(in_Normal, 0.0)).xyz;
-	pass_Tangent = (/*NormalMatrix * */vec4(in_Tangent, 1.0)).xyz;
-	pass_Bitangent = (/*NormalMatrix * */vec4(pass_Bitangent, 1.0)).xyz;
+	pass_Tangent = (NormalMatrix * vec4(in_Tangent, 1.0)).xyz;
+	pass_Bitangent = (NormalMatrix * vec4(pass_Bitangent, 1.0)).xyz;
 }

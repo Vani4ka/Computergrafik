@@ -34,7 +34,7 @@ void main() {
 
     vec3 normal = texture(NormalMapTex, pass_TexCoord).rgb;
     normal = normalize(normal * 2.0 - 1.0);
-    normal = tangentMatrix * normal;
+    normal = normalize(tangentMatrix * normal);
 
     diffuseColor = texture(ColorTex, pass_TexCoord).xyz;
     ambientColor = diffuseColor;
