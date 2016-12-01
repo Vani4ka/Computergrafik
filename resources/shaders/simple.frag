@@ -28,9 +28,10 @@ float specularMaterial = 0.5f;
 out vec4 out_Color;
 
 void main() {
-    mat3 tangentMatrix = mat3(normalize(pass_Tangent),
-                              normalize(pass_Bitangent),
-                              normalize(pass_Normal));
+    mat3 tangentMatrix = /*transpose*/(mat3(pass_Tangent,
+                                        pass_Bitangent,
+                                        pass_Normal)
+                                        );
 
     vec3 normal = texture(NormalMapTex, pass_TexCoord).rgb;
     normal = normalize(normal * 2.0 - 1.0);

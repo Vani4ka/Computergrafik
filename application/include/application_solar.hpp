@@ -80,6 +80,7 @@ protected:
     int shadingMode;
 
     bool toggleGrayscale;
+    bool toggleMirroringHorizontal;
 
     // cpu representation of model
     model_object planet_object;
