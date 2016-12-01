@@ -6,6 +6,7 @@ uniform sampler2D ColorTex;
 
 uniform bool ToggleGrayscale;
 uniform bool ToggleMirroringHorizontal;
+uniform bool ToggleMirroringVertical;
 
 out vec4 out_Color;
 
@@ -17,7 +18,13 @@ void main() {
     color = tex_Color;
 
     if(ToggleMirroringHorizontal){
-        texCoord = vec2(pass_TexCoord.x, abs(pass_TexCoord.y - 1));
+        texCoord = vec2(texCoord.x, abs(texCoord.y - 1));
+        tex_Color = texture(ColorTex, texCoord).rgb;
+        color = tex_Color;
+    }
+
+    if(ToggleMirroringVertical){
+        texCoord = vec2(abs(texCoord.x - 1), texCoord.y);
         tex_Color = texture(ColorTex, texCoord).rgb;
         color = tex_Color;
     }

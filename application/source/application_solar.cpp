@@ -202,6 +202,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
 
     toggleGrayscale = false;
     toggleMirroringHorizontal = false;
+    toggleMirroringVertical = false;
 
     initializeGeometry();
     initializeTextures();
@@ -245,6 +246,7 @@ void ApplicationSolar::renderScreen() const{
 
     glUniform1b(m_shaders.at("screen").u_locs.at("ToggleGrayscale"), toggleGrayscale);
     glUniform1b(m_shaders.at("screen").u_locs.at("ToggleMirroringHorizontal"), toggleMirroringHorizontal);
+    glUniform1b(m_shaders.at("screen").u_locs.at("ToggleMirroringVertical"), toggleMirroringVertical);
     glUniform1i(m_shaders.at("screen").u_locs.at("ColorTex"), index);
 
     glBindVertexArray(screen_quad_object.vertex_AO);
@@ -482,6 +484,9 @@ void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) 
     else if (key == GLFW_KEY_8 && action == GLFW_PRESS){
         toggleMirroringHorizontal = !toggleMirroringHorizontal;
     }
+    else if (key == GLFW_KEY_9 && action == GLFW_PRESS){
+        toggleMirroringVertical = !toggleMirroringVertical;
+    }
 }
 
 void ApplicationSolar::mouseCallback(double xpos, double ypos){
@@ -637,6 +642,7 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("screen").u_locs["ColorTex"] = -1;
     m_shaders.at("screen").u_locs["ToggleGrayscale"] = -1;
     m_shaders.at("screen").u_locs["ToggleMirroringHorizontal"] = -1;
+    m_shaders.at("screen").u_locs["ToggleMirroringVertical"] = -1;
 }
 
 void ApplicationSolar::initializeFramebuffer() {
