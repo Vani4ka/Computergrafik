@@ -82,6 +82,7 @@ protected:
     bool toggleGrayscale;
     bool toggleMirroringHorizontal;
     bool toggleMirroringVertical;
+    bool toggleGaussianBlur;
 
     // cpu representation of model
     model_object planet_object;

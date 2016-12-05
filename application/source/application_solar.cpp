@@ -203,6 +203,7 @@ ApplicationSolar::ApplicationSolar(std::string const& resource_path)
     toggleGrayscale = false;
     toggleMirroringHorizontal = false;
     toggleMirroringVertical = false;
+    toggleGaussianBlur = false;
 
     initializeGeometry();
     initializeTextures();
@@ -247,6 +248,7 @@ void ApplicationSolar::renderScreen() const{
     glUniform1b(m_shaders.at("screen").u_locs.at("ToggleGrayscale"), toggleGrayscale);
     glUniform1b(m_shaders.at("screen").u_locs.at("ToggleMirroringHorizontal"), toggleMirroringHorizontal);
     glUniform1b(m_shaders.at("screen").u_locs.at("ToggleMirroringVertical"), toggleMirroringVertical);
+    glUniform1b(m_shaders.at("screen").u_locs.at("ToggleGaussianBlur"), toggleGaussianBlur);
     glUniform1i(m_shaders.at("screen").u_locs.at("ColorTex"), index);
 
     glBindVertexArray(screen_quad_object.vertex_AO);
@@ -373,6 +375,7 @@ void ApplicationSolar::updateProjection() {
     //get viewport settings
     GLint m_viewport[4];
     glGetIntegerv(GL_VIEWPORT, m_viewport);
+    glm::fvec2 resolution = {m_viewport[2], m_viewport[3]};
 
     glUseProgram(m_shaders.at("planet").handle);
     // upload matrix to gpu
@@ -395,8 +398,8 @@ void ApplicationSolar::updateProjection() {
     glBindRenderbuffer(GL_RENDERBUFFER, framebuffer.rbo);
     glRenderbufferStorage(GL_RENDERBUFFER,
                           GL_DEPTH_COMPONENT,
-                          m_viewport[2],
-                          m_viewport[3]);
+                          (GLsizei) resolution.x,
+                          (GLsizei) resolution.y);
 
     glActiveTexture(framebuffer.tex.target);
     glBindTexture(GL_TEXTURE_2D, framebuffer.tex.handle);
@@ -434,6 +437,8 @@ void ApplicationSolar::updateProjection() {
     if(status != GL_FRAMEBUFFER_COMPLETE){
         throw std::logic_error("ERROR: Framebuffer incomplete");
     }
+
+    glUseProgram(m_shaders.at("screen").handle);
 }
 
 // update uniform locations
@@ -486,6 +491,9 @@ void ApplicationSolar::keyCallback(int key, int scancode, int action, int mods) 
     }
     else if (key == GLFW_KEY_9 && action == GLFW_PRESS){
         toggleMirroringVertical = !toggleMirroringVertical;
+    }
+    else if (key == GLFW_KEY_0 && action == GLFW_PRESS){
+        toggleGaussianBlur = !toggleGaussianBlur;
     }
 }
 
@@ -643,6 +651,7 @@ void ApplicationSolar::initializeShaderPrograms() {
     m_shaders.at("screen").u_locs["ToggleGrayscale"] = -1;
     m_shaders.at("screen").u_locs["ToggleMirroringHorizontal"] = -1;
     m_shaders.at("screen").u_locs["ToggleMirroringVertical"] = -1;
+    m_shaders.at("screen").u_locs["ToggleGaussianBlur"] = -1;
 }
 
 void ApplicationSolar::initializeFramebuffer() {

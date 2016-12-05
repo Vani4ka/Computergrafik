@@ -7,6 +7,7 @@ uniform sampler2D ColorTex;
 uniform bool ToggleGrayscale;
 uniform bool ToggleMirroringHorizontal;
 uniform bool ToggleMirroringVertical;
+uniform bool ToggleGaussianBlur;
 
 out vec4 out_Color;
 
@@ -29,9 +30,23 @@ void main() {
         color = tex_Color;
     }
 
+    if(ToggleGaussianBlur){
+        vec2 offset = vec2(1.0 / float(textureSize(ColorTex, 0).x));
+        color = vec3(0.0,0.0,0.0);
+
+        color += (texture(ColorTex, texCoord + vec2(-offset.x, - offset.y)) * (1.0/16.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(0, -offset.y)) * (1.0/8.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(offset.x , -offset.y)) * (1.0/16.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(-offset.x, 0)) * (1.0/8.0)).rgb;
+        color += (texture(ColorTex, texCoord) * (1.0/4.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(offset.x, 0)) * (1.0/8.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(-offset.x , offset.y)) * (1.0/16.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(0, offset.y)) * (1.0/8.0)).rgb;
+        color += (texture(ColorTex, texCoord + vec2(offset.x, offset.y)) * (1.0/16.0)).rgb;
+    }
+
     if(ToggleGrayscale){
-        vec3 tex_color = texture(ColorTex, texCoord).rgb;
-        float luminance = 0.2126 * tex_color.r + 0.7152 * tex_color.g  + 0.0722 * tex_color.b;
+        float luminance = 0.2126 * color.r + 0.7152 * color.g  + 0.0722 * color.b;
         color = vec3(luminance, luminance, luminance);
     }
 
